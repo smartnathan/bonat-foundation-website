@@ -6,7 +6,7 @@
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-dark">
 
         {{-- Placeholder image area --}}
-        <div class="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-purple/80 to-brand-dark opacity-90"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-dark via-brand-blue/80 to-brand-dark opacity-90"></div>
 
         {{-- Decorative gold pattern --}}
         <div class="absolute inset-0 opacity-[0.03]" style="background-image: repeating-linear-gradient(45deg, #D4AF37 0, #D4AF37 1px, transparent 0, transparent 50%); background-size: 30px 30px;"></div>
@@ -27,7 +27,7 @@
 
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
                 Mama Deborah<br>
-                <span class="text-brand-gold">Ishaku Bonat</span>
+                <span class="text-brand-gold">Iya Bonat</span>
             </h1>
 
             <p class="mt-4 text-white/50 text-sm tracking-widest uppercase">
@@ -47,7 +47,7 @@
                     Leave a Tribute
                 </a>
                 <a href="#donate"
-                   class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-gold text-brand-purple rounded-xl font-bold text-sm hover:bg-brand-gold-light transition-colors shadow-lg">
+                   class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-gold text-brand-blue rounded-xl font-bold text-sm hover:bg-brand-gold-light transition-colors shadow-lg">
                     Give in Her Memory
                 </a>
             </div>
@@ -69,12 +69,12 @@
 
             <div class="text-center mb-12">
                 <p class="text-brand-gold text-xs font-semibold uppercase tracking-widest mb-2">A Message from the Board</p>
-                <h2 class="text-3xl sm:text-4xl font-bold text-brand-purple">The Vision Unveiled</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-blue">The Vision Unveiled</h2>
             </div>
 
             <div class="bg-white rounded-3xl shadow-sm border border-purple-100 p-8 sm:p-12 max-w-3xl mx-auto">
                 {{-- Image placeholder for board photo --}}
-                <div class="w-20 h-20 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-6 text-brand-purple font-bold text-2xl border-2 border-brand-gold/30">
+                <div class="w-20 h-20 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-6 text-brand-blue font-bold text-2xl border-2 border-brand-gold/30">
                     DBF
                 </div>
 
@@ -84,7 +84,7 @@
 
                 <div class="mt-8 space-y-4 text-gray-600 text-base leading-relaxed">
                     <p>
-                        Our mother, Deborah Ishaku Bonat, walked 29 years as a widow — not in retreat, but in forward motion.
+                        Our mother, Deborah Iya Bonat, walked 29 years as a widow — not in retreat, but in forward motion.
                         From distributing firewood and foodstuff in Jos, to supporting missionaries in the field, to nurturing
                         new converts and abandoned orphans, she spent herself completely in service.
                     </p>
@@ -100,7 +100,7 @@
                 </div>
 
                 <div class="mt-8 pt-6 border-t border-gray-100 text-center">
-                    <p class="text-brand-purple font-semibold">The Board of Directors</p>
+                    <p class="text-brand-blue font-semibold">The Board of Directors</p>
                     <p class="text-gray-500 text-sm mt-1">The Deborah Bonat Foundation</p>
                 </div>
             </div>
@@ -110,12 +110,12 @@
     {{-- ============================================================
          FUNERAL DETAILS
     ============================================================ --}}
-    <section class="py-16 bg-brand-purple/5 border-y border-purple-100">
+    <section class="py-16 bg-brand-blue/5 border-y border-purple-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
 
             <div class="text-center mb-10">
                 <p class="text-brand-gold text-xs font-semibold uppercase tracking-widest mb-2">Homegoing Celebration</p>
-                <h2 class="text-3xl font-bold text-brand-purple">Funeral &amp; Burial Details</h2>
+                <h2 class="text-3xl font-bold text-brand-blue">Funeral &amp; Burial Details</h2>
                 <p class="mt-2 text-gray-500 text-sm">Details will be updated as arrangements are finalised.</p>
             </div>
 
@@ -123,41 +123,41 @@
 
                 <div class="bg-white rounded-2xl p-6 border border-purple-100 shadow-sm text-center">
                     <div class="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <h3 class="text-brand-purple font-bold mb-1">Lying in State</h3>
+                    <h3 class="text-brand-blue font-bold mb-1">Lying in State</h3>
                     <p class="text-gray-500 text-sm">[Date TBC]</p>
                     <p class="text-gray-400 text-xs mt-1">[Venue TBC]</p>
                 </div>
 
                 <div class="bg-white rounded-2xl p-6 border border-purple-100 shadow-sm text-center">
                     <div class="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
                         </svg>
                     </div>
-                    <h3 class="text-brand-purple font-bold mb-1">Thanksgiving Service</h3>
+                    <h3 class="text-brand-blue font-bold mb-1">Thanksgiving Service</h3>
                     <p class="text-gray-500 text-sm">[Date TBC]</p>
                     <p class="text-gray-400 text-xs mt-1">[Church &amp; Location TBC]</p>
                 </div>
 
                 <div class="bg-white rounded-2xl p-6 border border-purple-100 shadow-sm text-center">
                     <div class="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-6 h-6 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                         </svg>
                     </div>
-                    <h3 class="text-brand-purple font-bold mb-1">Interment</h3>
+                    <h3 class="text-brand-blue font-bold mb-1">Interment</h3>
                     <p class="text-gray-500 text-sm">[Date TBC]</p>
                     <p class="text-gray-400 text-xs mt-1">[Location TBC]</p>
                 </div>
             </div>
 
             <p class="text-center mt-6 text-gray-400 text-xs">
-                For logistical enquiries, please <a href="{{ route('contact') }}" class="text-brand-purple underline">contact us</a>.
+                For logistical enquiries, please <a href="{{ route('contact') }}" class="text-brand-blue underline">contact us</a>.
             </p>
         </div>
     </section>
@@ -170,7 +170,7 @@
 
             <div class="text-center mb-12">
                 <p class="text-brand-gold text-xs font-semibold uppercase tracking-widest mb-2">Memorial Tribute</p>
-                <h2 class="text-3xl sm:text-4xl font-bold text-brand-purple">Leave a Tribute</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold text-brand-blue">Leave a Tribute</h2>
                 <p class="mt-2 text-gray-500 max-w-lg mx-auto text-sm">
                     Share a memory, a word of comfort, or a prayer for the family.
                     All messages are reviewed before appearing publicly.
@@ -181,7 +181,7 @@
 
                 {{-- Submission Form --}}
                 <div class="bg-white rounded-3xl p-8 shadow-sm border border-purple-100">
-                    <h3 class="text-brand-purple font-bold text-lg mb-6">Write Your Tribute</h3>
+                    <h3 class="text-brand-blue font-bold text-lg mb-6">Write Your Tribute</h3>
 
                     @if(session('condolence_success'))
                         <div class="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 text-sm">
@@ -201,7 +201,7 @@
                                 value="{{ old('name') }}"
                                 required
                                 maxlength="100"
-                                class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-purple/30 focus:border-brand-purple transition-colors @error('name') border-red-400 @enderror"
+                                class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue transition-colors @error('name') border-red-400 @enderror"
                                 placeholder="e.g. Pastor John Musa"
                             >
                             @error('name')
@@ -217,7 +217,7 @@
                                 name="email"
                                 value="{{ old('email') }}"
                                 maxlength="255"
-                                class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-purple/30 focus:border-brand-purple transition-colors @error('email') border-red-400 @enderror"
+                                class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue transition-colors @error('email') border-red-400 @enderror"
                                 placeholder="your@email.com"
                             >
                             @error('email')
@@ -233,7 +233,7 @@
                                 required
                                 maxlength="1000"
                                 rows="5"
-                                class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-purple/30 focus:border-brand-purple transition-colors resize-none @error('message') border-red-400 @enderror"
+                                class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue transition-colors resize-none @error('message') border-red-400 @enderror"
                                 placeholder="Share a memory, a prayer, or a word of encouragement..."
                             >{{ old('message') }}</textarea>
                             @error('message')
@@ -242,7 +242,7 @@
                         </div>
 
                         <button type="submit"
-                                class="w-full py-3 bg-brand-purple text-white rounded-xl font-semibold text-sm hover:bg-brand-purple-light transition-colors">
+                                class="w-full py-3 bg-brand-blue text-white rounded-xl font-semibold text-sm hover:bg-brand-blue-light transition-colors">
                             Submit Tribute
                         </button>
                     </form>
@@ -250,7 +250,7 @@
 
                 {{-- Condolence Wall --}}
                 <div>
-                    <h3 class="text-brand-purple font-bold text-lg mb-6">Tributes from the Community</h3>
+                    <h3 class="text-brand-blue font-bold text-lg mb-6">Tributes from the Community</h3>
 
                     @if($condolences->isEmpty())
                         <div class="bg-white rounded-2xl p-8 border border-purple-100 text-center text-gray-400">
@@ -262,7 +262,7 @@
                             @foreach($condolences as $condolence)
                                 <div class="bg-white rounded-2xl p-5 border border-purple-100 shadow-sm">
                                     <div class="flex items-start gap-3">
-                                        <div class="w-9 h-9 rounded-full bg-brand-purple/10 flex items-center justify-center text-brand-purple font-bold text-sm shrink-0">
+                                        <div class="w-9 h-9 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue font-bold text-sm shrink-0">
                                             {{ strtoupper(substr($condolence->name, 0, 1)) }}
                                         </div>
                                         <div class="min-w-0">
@@ -307,7 +307,7 @@
                         their formative years. Every naira changes a trajectory.
                     </p>
                     <a href="{{ route('get-involved.donate') }}?fund=hope"
-                       class="mt-6 inline-flex items-center justify-center w-full px-6 py-3 bg-brand-gold text-brand-purple rounded-xl font-bold text-sm hover:bg-brand-gold-light transition-colors">
+                       class="mt-6 inline-flex items-center justify-center w-full px-6 py-3 bg-brand-gold text-brand-blue rounded-xl font-bold text-sm hover:bg-brand-gold-light transition-colors">
                         Donate to HOPE Fund
                     </a>
                 </div>
@@ -322,7 +322,7 @@
                         shelter, and discipleship through "Deborah's Basket" monthly care packages.
                     </p>
                     <a href="{{ route('get-involved.donate') }}?fund=new-converts"
-                       class="mt-6 inline-flex items-center justify-center w-full px-6 py-3 bg-brand-gold text-brand-purple rounded-xl font-bold text-sm hover:bg-brand-gold-light transition-colors">
+                       class="mt-6 inline-flex items-center justify-center w-full px-6 py-3 bg-brand-gold text-brand-blue rounded-xl font-bold text-sm hover:bg-brand-gold-light transition-colors">
                         Donate to New Convert Care
                     </a>
                 </div>
@@ -343,7 +343,7 @@
     <section class="py-16 bg-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
             <p class="text-brand-gold text-xs font-semibold uppercase tracking-widest mb-2">The Five Pillars</p>
-            <h2 class="text-2xl sm:text-3xl font-bold text-brand-purple">Her Mission, Our Mandate</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold text-brand-blue">Her Mission, Our Mandate</h2>
             <p class="mt-3 text-gray-500 text-sm max-w-xl mx-auto">
                 The Deborah Bonat Foundation serves five groups she held closest to her heart.
             </p>
@@ -359,12 +359,12 @@
                     <a href="{{ route($routeName) }}"
                        class="group bg-brand-cream rounded-2xl p-5 flex flex-col items-center gap-2 border border-purple-100 hover:border-brand-gold/40 hover:shadow-sm transition-all">
                         <span class="text-2xl">{{ $icon }}</span>
-                        <span class="text-brand-purple text-xs font-semibold group-hover:text-brand-gold transition-colors">{{ $label }}</span>
+                        <span class="text-brand-blue text-xs font-semibold group-hover:text-brand-gold transition-colors">{{ $label }}</span>
                     </a>
                 @endforeach
             </div>
 
-            <a href="{{ route('home') }}" class="mt-10 inline-flex items-center gap-2 text-brand-purple font-semibold text-sm hover:text-brand-gold transition-colors">
+            <a href="{{ route('home') }}" class="mt-10 inline-flex items-center gap-2 text-brand-blue font-semibold text-sm hover:text-brand-gold transition-colors">
                 Explore the full foundation website <span>→</span>
             </a>
         </div>

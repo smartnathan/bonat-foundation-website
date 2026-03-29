@@ -10,17 +10,17 @@
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         :root {
-            --purple: #4B0082;
-            --purple-light: #6B21A8;
-            --purple-dark: #1A0030;
+            --blue: #0C2461;
+            --blue-light: #1E40AF;
+            --blue-dark: #070F2B;
             --gold: #D4AF37;
             --gold-light: #F0D060;
-            --cream: #FDFAF5;
+            --cream: #F0F4FF;
         }
 
         body {
             font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
-            background-color: var(--purple-dark);
+            background-color: var(--blue-dark);
             color: white;
             min-height: 100vh;
             display: flex;
@@ -56,7 +56,7 @@
             transform: translate(-50%, -50%);
             width: 700px;
             height: 700px;
-            background: radial-gradient(circle, rgba(75, 0, 130, 0.4) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(12, 36, 97, 0.6) 0%, transparent 70%);
             pointer-events: none;
         }
 
@@ -169,7 +169,7 @@
             display: inline-block;
             padding: 0.75rem 2rem;
             background: var(--gold);
-            color: var(--purple);
+            color: var(--blue);
             border-radius: 0.75rem;
             font-weight: 700;
             font-size: 0.875rem;
@@ -194,7 +194,7 @@
 
         <div class="divider">
             <div class="divider-line"></div>
-            <span class="divider-text">In Memory of Mama Deborah Ishaku Bonat</span>
+            <span class="divider-text">In Memory of Mama Deborah Iya Bonat</span>
             <div class="divider-line"></div>
         </div>
 
@@ -218,9 +218,14 @@
 
         <div class="notify-section">
             <p class="notify-label">For enquiries in the meantime</p>
-            <a href="mailto:info@deborahbonatfoundation.org" class="contact-link">
+            <a href="mailto:contact@deborahbonatfoundation.org" class="contact-link">
                 Get in Touch
             </a>
+            <div style="margin-top: 1.25rem; display: flex; flex-direction: column; gap: 0.35rem;">
+                <a href="tel:+2349065477834" style="color: rgba(212,175,55,0.75); font-size: 0.85rem; text-decoration: none; letter-spacing: 0.03em;">+234 906 547 7834</a>
+                <a href="tel:+2348066968052" style="color: rgba(212,175,55,0.75); font-size: 0.85rem; text-decoration: none; letter-spacing: 0.03em;">+234 806 696 8052</a>
+                <a href="tel:+2348148852777" style="color: rgba(212,175,55,0.75); font-size: 0.85rem; text-decoration: none; letter-spacing: 0.03em;">+234 814 885 2777</a>
+            </div>
         </div>
 
         <p class="footer-note">&copy; {{ date('Y') }} The Deborah Bonat Foundation. All rights reserved.</p>

@@ -6,7 +6,7 @@
 ])
 
 <section class="relative {{ $tall ? 'min-h-[70vh]' : 'py-20 md:py-28' }} flex items-center justify-center overflow-hidden
-    {{ $dark ? 'bg-brand-dark' : 'bg-brand-purple' }}">
+    {{ $dark ? 'bg-brand-dark' : 'bg-brand-blue' }}">
 
     {{-- Decorative background pattern --}}
     <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, #D4AF37 0, #D4AF37 1px, transparent 0, transparent 50%); background-size: 20px 20px;"></div>

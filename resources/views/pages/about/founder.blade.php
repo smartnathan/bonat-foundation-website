@@ -10,7 +10,7 @@
 
             {{-- Pull quote --}}
             <blockquote class="mb-14 text-center">
-                <p class="text-2xl sm:text-3xl text-brand-purple font-light italic leading-relaxed">
+                <p class="text-2xl sm:text-3xl text-brand-blue font-light italic leading-relaxed">
                     "She did not sit down in her grief. She got up and gave it away."
                 </p>
                 <footer class="mt-4 text-brand-gold/80 text-sm">— A tribute from those who knew her</footer>
@@ -22,9 +22,9 @@
             </div>
 
             <div class="prose prose-lg prose-slate max-w-none space-y-6 text-gray-700 leading-relaxed">
-                <h2 class="text-2xl font-bold text-brand-purple">A Life Defined by Service</h2>
+                <h2 class="text-2xl font-bold text-brand-blue">A Life Defined by Service</h2>
                 <p>
-                    Deborah Ishaku Bonat was born into a faith that would become her entire identity. From her earliest
+                    Deborah Iya Bonat was born into a faith that would become her entire identity. From her earliest
                     years, she was drawn to the margins — to the people others looked away from. When she became a widow,
                     she could have turned inward. Instead, she turned outward.
                 </p>
@@ -34,7 +34,7 @@
                     She visited the sick. She prayed for the grieving. She showed up.
                 </p>
 
-                <h2 class="text-2xl font-bold text-brand-purple mt-10">The Five She Loved</h2>
+                <h2 class="text-2xl font-bold text-brand-blue mt-10">The Five She Loved</h2>
                 <p>
                     Every name on the foundation's five pillars represents a group she personally served:
                 </p>
@@ -46,7 +46,7 @@
                     <li class="flex gap-3"><span class="text-brand-gold font-bold shrink-0">New Converts:</span> She understood what it cost to change your faith in a hostile environment. She made sure those people had food, a roof if needed, and someone standing with them.</li>
                 </ul>
 
-                <h2 class="text-2xl font-bold text-brand-purple mt-10">The Taraba Journey</h2>
+                <h2 class="text-2xl font-bold text-brand-blue mt-10">The Taraba Journey</h2>
                 <p>
                     Her final mission was to Taraba State — a place of need, and a place she felt called to serve. It was
                     not unusual for her to go where others would not. That final journey was not a tragedy. It was the
@@ -54,7 +54,7 @@
                     her most.
                 </p>
 
-                <h2 class="text-2xl font-bold text-brand-purple mt-10">Her Legacy, Formalised</h2>
+                <h2 class="text-2xl font-bold text-brand-blue mt-10">Her Legacy, Formalised</h2>
                 <p>
                     The Deborah Bonat Foundation was not invented after her death. It was always there — in her hands,
                     her visits, her distributions, her prayers. What her family and the board have done is give it a name,
@@ -64,11 +64,11 @@
 
             <div class="mt-14 pt-8 border-t border-gray-200 flex flex-col sm:flex-row gap-4 items-center justify-center">
                 <a href="{{ route('about') }}"
-                   class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-purple-200 text-brand-purple rounded-xl font-semibold text-sm hover:bg-brand-cream transition-colors">
+                   class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-purple-200 text-brand-blue rounded-xl font-semibold text-sm hover:bg-brand-cream transition-colors">
                     ← Back to About Us
                 </a>
                 <a href="{{ route('get-involved.donate') }}"
-                   class="inline-flex items-center gap-2 px-6 py-3 bg-brand-gold text-brand-purple rounded-xl font-bold text-sm hover:bg-brand-gold-light transition-colors">
+                   class="inline-flex items-center gap-2 px-6 py-3 bg-brand-gold text-brand-blue rounded-xl font-bold text-sm hover:bg-brand-gold-light transition-colors">
                     Honour Her Legacy — Give Now
                 </a>
             </div>

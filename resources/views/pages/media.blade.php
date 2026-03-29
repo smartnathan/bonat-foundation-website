@@ -13,12 +13,12 @@
                 <div class="flex items-end justify-between mb-8">
                     <div>
                         <p class="text-brand-gold text-xs font-semibold uppercase tracking-widest mb-1">Press</p>
-                        <h2 class="text-2xl font-bold text-brand-purple">In the News</h2>
+                        <h2 class="text-2xl font-bold text-brand-blue">In the News</h2>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     @foreach([
-                        ['Foundation Launch Announced', 'The Deborah Bonat Foundation officially launches in memory of dedicated servant and widow Deborah Ishaku Bonat.', '[Publication TBC]', '[Date TBC]'],
+                        ['Foundation Launch Announced', 'The Deborah Bonat Foundation officially launches in memory of dedicated servant and widow Deborah Iya Bonat.', '[Publication TBC]', '[Date TBC]'],
                         ['Taraba Mission Trip', 'A retrospective on Mama Deborah\'s final mission trip to Taraba State and the communities she served.', '[Publication TBC]', '[Date TBC]'],
                         ['Five Pillars Initiative', 'How the foundation\'s five-pillar model addresses the most overlooked communities in Northern Nigeria.', '[Publication TBC]', '[Date TBC]'],
                     ] as [$title, $excerpt, $pub, $date])
@@ -36,7 +36,7 @@
             <div class="mb-16">
                 <div class="mb-8">
                     <p class="text-brand-gold text-xs font-semibold uppercase tracking-widest mb-1">Gallery</p>
-                    <h2 class="text-2xl font-bold text-brand-purple">Photo Gallery</h2>
+                    <h2 class="text-2xl font-bold text-brand-blue">Photo Gallery</h2>
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                     @for($i = 1; $i <= 8; $i++)
@@ -52,7 +52,7 @@
             <div>
                 <div class="mb-8">
                     <p class="text-brand-gold text-xs font-semibold uppercase tracking-widest mb-1">Resources</p>
-                    <h2 class="text-2xl font-bold text-brand-purple">Downloads</h2>
+                    <h2 class="text-2xl font-bold text-brand-blue">Downloads</h2>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     @foreach([
@@ -74,13 +74,13 @@
             </div>
 
             {{-- Press Contact --}}
-            <div class="mt-14 bg-brand-purple rounded-3xl p-8 text-center text-white">
+            <div class="mt-14 bg-brand-blue rounded-3xl p-8 text-center text-white">
                 <h3 class="text-xl font-bold text-brand-gold mb-2">Media Enquiries</h3>
                 <p class="text-white/70 text-sm mb-6 max-w-lg mx-auto">
                     For press interviews, photo requests, or foundation statements, please contact our communications team.
                 </p>
                 <a href="{{ route('contact') }}"
-                   class="inline-flex items-center justify-center px-8 py-3 bg-brand-gold text-brand-purple rounded-xl font-bold text-sm hover:bg-brand-gold-light transition-colors">
+                   class="inline-flex items-center justify-center px-8 py-3 bg-brand-gold text-brand-blue rounded-xl font-bold text-sm hover:bg-brand-gold-light transition-colors">
                     Contact Communications
                 </a>
             </div>

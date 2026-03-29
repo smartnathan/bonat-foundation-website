@@ -9,10 +9,10 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 
-    --color-brand-purple: #4B0082;
-    --color-brand-purple-light: #6B21A8;
+    --color-brand-blue: #0C2461;
+    --color-brand-blue-light: #1E40AF;
     --color-brand-gold: #D4AF37;
     --color-brand-gold-light: #F0D060;
-    --color-brand-cream: #FDFAF5;
-    --color-brand-dark: #1A0030;
+    --color-brand-cream: #F0F4FF;
+    --color-brand-dark: #070F2B;
 }

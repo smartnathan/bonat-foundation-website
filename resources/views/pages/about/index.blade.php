@@ -11,10 +11,10 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <p class="text-brand-gold text-xs font-semibold uppercase tracking-widest mb-3">The Founder</p>
-                    <h2 class="text-3xl font-bold text-brand-purple leading-tight">
-                        Mama Deborah Ishaku Bonat
+                    <h2 class="text-3xl font-bold text-brand-blue leading-tight">
+                        Mama Deborah Iya Bonat
                     </h2>
-                    <p class="mt-2 text-brand-purple/60 text-sm">[Birth Year] – [Year of Passing]</p>
+                    <p class="mt-2 text-brand-blue/60 text-sm">[Birth Year] – [Year of Passing]</p>
                     <div class="mt-5 space-y-4 text-gray-600 leading-relaxed">
                         <p>
                             For 29 years, Mama Deborah walked the long road of widowhood — not with bitterness, but with
@@ -27,7 +27,7 @@
                         </p>
                     </div>
                     <a href="{{ route('about.founder') }}"
-                       class="mt-7 inline-flex items-center gap-2 px-6 py-3 bg-brand-purple text-white rounded-xl font-semibold text-sm hover:bg-brand-purple-light transition-colors">
+                       class="mt-7 inline-flex items-center gap-2 px-6 py-3 bg-brand-blue text-white rounded-xl font-semibold text-sm hover:bg-brand-blue-light transition-colors">
                         Read Her Full Story
                         <span>→</span>
                     </a>
@@ -44,12 +44,12 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-14">
                 <p class="text-brand-gold text-xs font-semibold uppercase tracking-widest mb-2">Our Blueprint</p>
-                <h2 class="text-3xl font-bold text-brand-purple">Objectives &amp; Core Values</h2>
+                <h2 class="text-3xl font-bold text-brand-blue">Objectives &amp; Core Values</h2>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <div>
-                    <h3 class="text-xl font-bold text-brand-purple mb-6">Our Objectives</h3>
+                    <h3 class="text-xl font-bold text-brand-blue mb-6">Our Objectives</h3>
                     <div class="space-y-4">
                         @foreach([
                             ['Empower Widows', 'Provide skills, training, and economic pathways so that widows become self-sufficient workers and community contributors.'],
@@ -70,7 +70,7 @@
                 </div>
 
                 <div>
-                    <h3 class="text-xl font-bold text-brand-purple mb-6">Core Values</h3>
+                    <h3 class="text-xl font-bold text-brand-blue mb-6">Core Values</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         @foreach([
                             ['🙏', 'Faith', 'Every action is rooted in obedience to Christ\'s call to serve the least.'],
@@ -82,7 +82,7 @@
                         ] as [$icon, $value, $desc])
                             <div class="bg-brand-cream rounded-xl p-4 border border-purple-100">
                                 <p class="text-2xl mb-2">{{ $icon }}</p>
-                                <h4 class="font-semibold text-brand-purple text-sm">{{ $value }}</h4>
+                                <h4 class="font-semibold text-brand-blue text-sm">{{ $value }}</h4>
                                 <p class="text-gray-500 text-xs mt-1 leading-relaxed">{{ $desc }}</p>
                             </div>
                         @endforeach
@@ -93,16 +93,16 @@
     </section>
 
     {{-- Leadership --}}
-    <section id="leadership" class="py-20 bg-brand-purple/5 border-y border-purple-100 scroll-mt-16">
+    <section id="leadership" class="py-20 bg-brand-blue/5 border-y border-purple-100 scroll-mt-16">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-14">
                 <p class="text-brand-gold text-xs font-semibold uppercase tracking-widest mb-2">Governance</p>
-                <h2 class="text-3xl font-bold text-brand-purple">Leadership &amp; Governance</h2>
+                <h2 class="text-3xl font-bold text-brand-blue">Leadership &amp; Governance</h2>
             </div>
 
             {{-- Board of Trustees --}}
             <div class="mb-14">
-                <h3 class="text-xl font-bold text-brand-purple mb-8 text-center">Board of Trustees</h3>
+                <h3 class="text-xl font-bold text-brand-blue mb-8 text-center">Board of Trustees</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     @foreach([
                         ['Deborah I. Bonat', 'Founder & Patron (In Memoriam)', 'The heart and inspiration of the foundation.'],
@@ -110,11 +110,11 @@
                         ['Blessing Swanta Bonat', 'Board of Trustees Member', ''],
                     ] as [$name, $role, $note])
                         <div class="bg-white rounded-2xl p-6 border border-purple-100 shadow-sm text-center">
-                            <div class="w-16 h-16 rounded-full bg-brand-purple/10 flex items-center justify-center mx-auto mb-4 text-brand-purple font-bold text-xl border-2 border-brand-gold/20">
+                            <div class="w-16 h-16 rounded-full bg-brand-blue/10 flex items-center justify-center mx-auto mb-4 text-brand-blue font-bold text-xl border-2 border-brand-gold/20">
                                 {{ strtoupper(substr($name, 0, 1)) }}
                             </div>
                             <h4 class="font-bold text-gray-800">{{ $name }}</h4>
-                            <p class="text-brand-purple/70 text-xs font-medium mt-1">{{ $role }}</p>
+                            <p class="text-brand-blue/70 text-xs font-medium mt-1">{{ $role }}</p>
                             @if($note)
                                 <p class="text-gray-400 text-xs mt-2 italic">{{ $note }}</p>
                             @endif
@@ -125,7 +125,7 @@
 
             {{-- Board of Directors --}}
             <div class="mb-14">
-                <h3 class="text-xl font-bold text-brand-purple mb-8 text-center">Board of Directors</h3>
+                <h3 class="text-xl font-bold text-brand-blue mb-8 text-center">Board of Directors</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     @foreach([
                         ['[Name TBC]', 'Chairman, Board of Directors', ''],
@@ -137,7 +137,7 @@
                                 ?
                             </div>
                             <h4 class="font-bold text-gray-800">{{ $name }}</h4>
-                            <p class="text-brand-purple/70 text-xs font-medium mt-1">{{ $role }}</p>
+                            <p class="text-brand-blue/70 text-xs font-medium mt-1">{{ $role }}</p>
                         </div>
                     @endforeach
                 </div>
@@ -146,7 +146,7 @@
 
             {{-- Operations --}}
             <div class="bg-white rounded-3xl p-8 border border-purple-100 shadow-sm">
-                <h3 class="text-xl font-bold text-brand-purple mb-4">The Operations Team</h3>
+                <h3 class="text-xl font-bold text-brand-blue mb-4">The Operations Team</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                         <h4 class="font-semibold text-gray-800 mb-2">Program Managers</h4>

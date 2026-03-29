@@ -1,7 +1,7 @@
 <nav
     x-data="{ mobileOpen: false, programsOpen: false }"
     @click.outside="programsOpen = false"
-    class="bg-brand-purple shadow-lg sticky top-0 z-50"
+    class="bg-brand-blue shadow-lg sticky top-0 z-50"
 >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
@@ -54,23 +54,23 @@
                         class="absolute left-0 top-full mt-1 w-60 bg-white rounded-lg shadow-xl border border-purple-100 py-2 z-50"
                         style="display: none"
                     >
-                        <a href="{{ route('programs.index') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-purple">
+                        <a href="{{ route('programs.index') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
                             <span class="text-lg">📋</span> All Programs
                         </a>
                         <div class="border-t border-gray-100 my-1"></div>
-                        <a href="{{ route('programs.widows') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-purple">
+                        <a href="{{ route('programs.widows') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
                             <span class="text-lg">🌿</span> Widow Empowerment
                         </a>
-                        <a href="{{ route('programs.orphans') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-purple">
+                        <a href="{{ route('programs.orphans') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
                             <span class="text-lg">📚</span> Orphan Care
                         </a>
-                        <a href="{{ route('programs.elderly') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-purple">
+                        <a href="{{ route('programs.elderly') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
                             <span class="text-lg">🤝</span> Elderly Care
                         </a>
-                        <a href="{{ route('programs.missions') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-purple">
+                        <a href="{{ route('programs.missions') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
                             <span class="text-lg">✝️</span> Missions Support
                         </a>
-                        <a href="{{ route('programs.new-converts') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-purple">
+                        <a href="{{ route('programs.new-converts') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
                             <span class="text-lg">🕊️</span> New Convert Care
                         </a>
                     </div>
@@ -97,7 +97,7 @@
                 </a>
 
                 <a href="{{ route('get-involved.donate') }}"
-                   class="ml-3 inline-flex items-center px-4 py-2 bg-brand-gold text-brand-purple rounded-lg text-sm font-bold hover:bg-brand-gold-light transition-colors shadow">
+                   class="ml-3 inline-flex items-center px-4 py-2 bg-brand-gold text-brand-blue rounded-lg text-sm font-bold hover:bg-brand-gold-light transition-colors shadow">
                     Donate Now
                 </a>
             </div>
@@ -150,7 +150,7 @@
             <a href="{{ route('contact') }}" class="block px-3 py-2.5 text-white/80 hover:text-brand-gold hover:bg-white/5 rounded-md text-sm font-medium transition-colors">Contact Us</a>
 
             <div class="pt-2 pb-1">
-                <a href="{{ route('get-involved.donate') }}" class="block w-full text-center px-4 py-3 bg-brand-gold text-brand-purple rounded-lg text-sm font-bold hover:bg-brand-gold-light transition-colors">
+                <a href="{{ route('get-involved.donate') }}" class="block w-full text-center px-4 py-3 bg-brand-gold text-brand-blue rounded-lg text-sm font-bold hover:bg-brand-gold-light transition-colors">
                     Donate Now
                 </a>
             </div>

@@ -8,7 +8,7 @@
                 <p class="mt-3 text-white/60 text-sm leading-relaxed">
                     Turning every story of persecution into a story of resilience. Serving widows, orphans, the elderly, missionaries, and new converts across Nigeria.
                 </p>
-                <p class="mt-4 text-white/40 text-xs italic">In loving memory of Mama Deborah Ishaku Bonat</p>
+                <p class="mt-4 text-white/40 text-xs italic">In loving memory of Mama Deborah Iya Bonat</p>
 
                 {{-- Social links --}}
                 <div class="mt-5 flex gap-3">
@@ -57,10 +57,14 @@
                     <li><a href="{{ route('contact') }}" class="text-white/60 hover:text-brand-gold text-sm transition-colors">Contact Us</a></li>
                 </ul>
 
-                <div class="mt-6">
-                    <p class="text-white/40 text-xs mb-3">An initiative of the ECWA / EMS family</p>
+                <div class="mt-6 space-y-1.5">
+                    <p class="text-white/40 text-xs">An initiative of the ECWA / EMS family</p>
+                    <a href="mailto:contact@deborahbonatfoundation.org" class="block text-white/50 hover:text-brand-gold text-xs transition-colors">contact@deborahbonatfoundation.org</a>
+                    <p class="text-white/50 text-xs">+234 906 547 7834</p>
+                </div>
+                <div class="mt-4">
                     <a href="{{ route('get-involved.donate') }}"
-                       class="inline-block px-5 py-2.5 bg-brand-gold text-brand-purple rounded-lg text-sm font-bold hover:bg-brand-gold-light transition-colors">
+                       class="inline-block px-5 py-2.5 bg-brand-gold text-brand-blue rounded-lg text-sm font-bold hover:bg-brand-gold-light transition-colors">
                         Give Now
                     </a>
                 </div>

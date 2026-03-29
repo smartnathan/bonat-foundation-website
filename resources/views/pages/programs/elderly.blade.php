@@ -10,9 +10,9 @@
 
             <div class="bg-white rounded-3xl p-8 sm:p-12 border border-purple-100 shadow-sm mb-10">
                 <div class="flex items-center gap-4 mb-6">
-                    <div class="w-14 h-14 rounded-xl bg-brand-purple/10 flex items-center justify-center text-2xl">🤝</div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-blue/10 flex items-center justify-center text-2xl">🤝</div>
                     <div>
-                        <h2 class="text-2xl font-bold text-brand-purple">Golden Care Network (GCN)</h2>
+                        <h2 class="text-2xl font-bold text-brand-blue">Golden Care Network (GCN)</h2>
                         <p class="text-brand-gold text-sm font-semibold">Our Initiative</p>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         ['Companionship', 'Organised social events and fellowship gatherings to combat isolation'],
                     ] as [$title, $desc])
                         <div class="bg-brand-cream rounded-xl p-4 border border-purple-100">
-                            <h4 class="font-semibold text-brand-purple text-sm">{{ $title }}</h4>
+                            <h4 class="font-semibold text-brand-blue text-sm">{{ $title }}</h4>
                             <p class="text-gray-500 text-xs mt-1 leading-relaxed">{{ $desc }}</p>
                         </div>
                     @endforeach
@@ -47,11 +47,11 @@
 
             <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="{{ route('get-involved.donate') }}?program=elderly"
-                   class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-gold text-brand-purple rounded-xl font-bold text-sm hover:bg-brand-gold-light transition-colors">
+                   class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-gold text-brand-blue rounded-xl font-bold text-sm hover:bg-brand-gold-light transition-colors">
                     Support Elderly Care
                 </a>
                 <a href="{{ route('get-involved.volunteer') }}"
-                   class="inline-flex items-center justify-center px-8 py-3.5 bg-white border border-purple-200 text-brand-purple rounded-xl font-semibold text-sm hover:bg-brand-cream transition-colors">
+                   class="inline-flex items-center justify-center px-8 py-3.5 bg-white border border-purple-200 text-brand-blue rounded-xl font-semibold text-sm hover:bg-brand-cream transition-colors">
                     Volunteer as a Visitor
                 </a>
             </div>
