@@ -56,13 +56,15 @@
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     @foreach([
-                        ['📄', 'Foundation Overview Brochure', 'One-page summary of the foundation, its mission, and its five pillars.', 'PDF'],
-                        ['📊', 'Corporate Partnership Prospectus', 'Full details on corporate giving tiers and co-branding opportunities.', 'PDF'],
-                        ['✝️', 'Church Partnership Pack', 'How your congregation can become a local chapter of the foundation.', 'PDF'],
-                        ['📋', 'Annual Report (Coming Soon)', 'Impact report for the foundation\'s first year of operations.', 'PDF'],
+                        ['fa-solid fa-file-pdf', 'Foundation Overview Brochure', 'One-page summary of the foundation, its mission, and its five pillars.', 'PDF'],
+                        ['fa-solid fa-chart-bar', 'Corporate Partnership Prospectus', 'Full details on corporate giving tiers and co-branding opportunities.', 'PDF'],
+                        ['fa-solid fa-church', 'Church Partnership Pack', 'How your congregation can become a local chapter of the foundation.', 'PDF'],
+                        ['fa-solid fa-clipboard-list', 'Annual Report (Coming Soon)', 'Impact report for the foundation\'s first year of operations.', 'PDF'],
                     ] as [$icon, $title, $desc, $type])
                         <div class="bg-white rounded-2xl p-5 border border-purple-100 shadow-sm flex items-start gap-4">
-                            <div class="text-2xl">{{ $icon }}</div>
+                            <div class="text-brand-blue/60 text-2xl w-8 shrink-0 mt-0.5">
+                                <i class="{{ $icon }}"></i>
+                            </div>
                             <div class="flex-grow">
                                 <h4 class="font-semibold text-gray-800 text-sm">{{ $title }}</h4>
                                 <p class="text-gray-400 text-xs mt-1">{{ $desc }}</p>

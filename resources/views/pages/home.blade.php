@@ -21,7 +21,7 @@
 
         {{-- Portrait images — right half --}}
         <div class="absolute inset-y-0 right-0 w-full lg:w-[58%] z-10 pointer-events-none select-none">
-            @foreach(['IMG-20260325-WA0011.jpg.jpeg', 'IMG-20260326-WA0006.jpg.jpeg', 'IMG-20260326-WA0036.jpg.jpeg'] as $i => $img)
+            @foreach(['deborah-bonat-homepage-one.webp', 'doborah-bonat-homepage-two.webp', 'deborah-bonat-homepage-three.webp'] as $i => $img)
                 <div
                     class="absolute inset-0 transition-opacity duration-1000 ease-in-out"
                     x-cloak
@@ -30,8 +30,8 @@
                     <img
                         src="/images/homepage-banner/{{ $img }}"
                         alt="Mama Deborah Iya Bonat"
-                        class="w-full h-full object-cover object-top"
-                        style="filter: contrast(1.1) brightness(1.04) saturate(1.15);"
+                        class="w-full h-full object-cover"
+                        style="object-position: {{ $i === 1 ? 'center 25%' : 'top' }}; filter: contrast(1.1) brightness(1.04) saturate(1.15);"
                     >
                     {{-- Fade left edge into dark background --}}
                     <div class="absolute inset-0" style="background: linear-gradient(to right, #070F2B 0%, #070F2B 5%, rgba(7,15,43,0.85) 22%, rgba(7,15,43,0.3) 45%, transparent 65%);"></div>
@@ -126,35 +126,35 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <x-site.pillar-card
-                    icon="🌿"
+                    icon='<i class="fa-solid fa-hands-holding-heart"></i>'
                     title="Widow Empowerment"
                     initiative="Widows to Workers (W2W)"
                     description="Skills training and economic empowerment to transform grieving widows into self-sustaining workers."
                     route="programs.widows"
                 />
                 <x-site.pillar-card
-                    icon="📚"
+                    icon='<i class="fa-solid fa-book-open"></i>'
                     title="Orphan Care"
                     initiative="HOPE Fund"
                     description="Education sponsorships, mentorship, and care packages for orphaned children across Nigeria."
                     route="programs.orphans"
                 />
                 <x-site.pillar-card
-                    icon="🤝"
+                    icon='<i class="fa-solid fa-person-cane"></i>'
                     title="Elderly Care"
                     initiative="Golden Care Network (GCN)"
                     description="Dignity-restoring care, visitation, firewood, food, and clothing distributions for the elderly."
                     route="programs.elderly"
                 />
                 <x-site.pillar-card
-                    icon="✝️"
+                    icon='<i class="fa-solid fa-cross"></i>'
                     title="Missions Support"
                     initiative="EMS Field Support"
                     description="Direct aid and encouragement for local missionaries and ECWA Missionary Society field workers."
                     route="programs.missions"
                 />
                 <x-site.pillar-card
-                    icon="🕊️"
+                    icon='<i class="fa-solid fa-dove"></i>'
                     title="New Convert Care"
                     initiative="Deborah's Basket"
                     description="Monthly care packages, shelter, and discipleship for new believers facing persecution."

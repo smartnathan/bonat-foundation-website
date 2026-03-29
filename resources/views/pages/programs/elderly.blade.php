@@ -10,7 +10,9 @@
 
             <div class="bg-white rounded-3xl p-8 sm:p-12 border border-purple-100 shadow-sm mb-10">
                 <div class="flex items-center gap-4 mb-6">
-                    <div class="w-14 h-14 rounded-xl bg-brand-blue/10 flex items-center justify-center text-2xl">🤝</div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-blue/10 flex items-center justify-center text-2xl text-brand-blue">
+                        <i class="fa-solid fa-person-cane"></i>
+                    </div>
                     <div>
                         <h2 class="text-2xl font-bold text-brand-blue">Golden Care Network (GCN)</h2>
                         <p class="text-brand-gold text-sm font-semibold">Our Initiative</p>

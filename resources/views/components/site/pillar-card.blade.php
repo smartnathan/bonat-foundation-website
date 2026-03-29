@@ -8,8 +8,8 @@
 
 <a href="{{ route($route) }}"
    class="group block bg-white rounded-2xl p-6 shadow-sm border border-purple-100 hover:shadow-md hover:border-brand-gold/40 transition-all duration-200">
-    <div class="w-14 h-14 rounded-xl bg-purple-50 group-hover:bg-brand-gold/10 flex items-center justify-center text-2xl mb-4 transition-colors">
-        {{ $icon }}
+    <div class="w-14 h-14 rounded-xl bg-purple-50 group-hover:bg-brand-gold/10 flex items-center justify-center text-2xl text-brand-blue group-hover:text-brand-gold mb-4 transition-colors">
+        {!! $icon !!}
     </div>
     <h3 class="text-brand-blue font-bold text-lg leading-snug group-hover:text-brand-blue-light transition-colors">
         {{ $title }}

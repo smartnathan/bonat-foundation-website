@@ -55,23 +55,23 @@
                         style="display: none"
                     >
                         <a href="{{ route('programs.index') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
-                            <span class="text-lg">📋</span> All Programs
+                            <span class="text-lg"></span> All Programs
                         </a>
                         <div class="border-t border-gray-100 my-1"></div>
                         <a href="{{ route('programs.widows') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
-                            <span class="text-lg">🌿</span> Widow Empowerment
+                            <span class="text-lg"></span> Widow Empowerment
                         </a>
                         <a href="{{ route('programs.orphans') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
-                            <span class="text-lg">📚</span> Orphan Care
+                            <span class="text-lg"></span> Orphan Care
                         </a>
                         <a href="{{ route('programs.elderly') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
-                            <span class="text-lg">🤝</span> Elderly Care
+                            <span class="text-lg"></span> Elderly Care
                         </a>
                         <a href="{{ route('programs.missions') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
-                            <span class="text-lg">✝️</span> Missions Support
+                            <span class="text-lg"></span> Missions Support
                         </a>
                         <a href="{{ route('programs.new-converts') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
-                            <span class="text-lg">🕊️</span> New Convert Care
+                            <span class="text-lg"></span> New Convert Care
                         </a>
                     </div>
                 </div>

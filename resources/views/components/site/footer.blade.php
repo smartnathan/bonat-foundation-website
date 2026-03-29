@@ -60,7 +60,11 @@
                 <div class="mt-6 space-y-1.5">
                     <p class="text-white/40 text-xs">An initiative of the ECWA / EMS family</p>
                     <a href="mailto:contact@deborahbonatfoundation.org" class="block text-white/50 hover:text-brand-gold text-xs transition-colors">contact@deborahbonatfoundation.org</a>
-                    <p class="text-white/50 text-xs">+234 906 547 7834</p>
+                    <a href="https://wa.me/2349065477834" target="_blank" rel="noopener" class="flex items-center gap-1.5 text-white/50 hover:text-green-400 text-xs transition-colors">
+                        <i class="fa-brands fa-whatsapp text-green-400"></i>
+                        +234 906 547 7834
+                    </a>
+                    <p class="text-white/30 text-xs">Samaru Kataf, Kaduna State</p>
                 </div>
                 <div class="mt-4">
                     <a href="{{ route('get-involved.donate') }}"

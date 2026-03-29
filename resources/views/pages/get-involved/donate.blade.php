@@ -14,7 +14,7 @@
                 <h2 class="text-3xl font-bold text-brand-blue">Choose Your Giving Type</h2>
             </div>
 
-            <div x-data="{ giving: 'one-time' }" class="bg-white rounded-3xl border border-purple-100 shadow-sm overflow-hidden mb-12">
+            <div x-data="{ giving: 'one-time', frequency: 'monthly', selectedAmount: null, selectedOneTimeAmount: null }" class="bg-white rounded-3xl border border-purple-100 shadow-sm overflow-hidden mb-12">
 
                 {{-- Toggle --}}
                 <div class="flex border-b border-gray-100">
@@ -54,7 +54,10 @@
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Amount (NGN)</label>
                                 <div class="grid grid-cols-3 sm:grid-cols-5 gap-3 mb-3">
                                     @foreach(['2,500', '5,000', '10,000', '25,000', '50,000'] as $amount)
-                                        <button class="py-2.5 text-sm font-semibold border border-gray-200 rounded-xl hover:border-brand-blue hover:text-brand-blue transition-colors">
+                                        <button type="button"
+                                            @click="selectedOneTimeAmount = '{{ $amount }}'"
+                                            class="py-2.5 text-sm font-semibold border rounded-xl transition-colors"
+                                            :class="selectedOneTimeAmount === '{{ $amount }}' ? 'border-brand-blue bg-brand-blue text-white' : 'border-gray-200 hover:border-brand-blue hover:text-brand-blue'">
                                             ₦{{ $amount }}
                                         </button>
                                     @endforeach
@@ -71,15 +74,26 @@
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Frequency</label>
                                 <div class="grid grid-cols-2 gap-3">
-                                    <button class="py-3 text-sm font-semibold border-2 border-brand-blue text-brand-blue rounded-xl">Monthly</button>
-                                    <button class="py-3 text-sm font-semibold border border-gray-200 text-gray-500 rounded-xl hover:border-brand-blue hover:text-brand-blue transition-colors">Annual</button>
+                                    <button type="button" @click="frequency = 'monthly'"
+                                        class="py-3 text-sm font-semibold border-2 rounded-xl transition-colors"
+                                        :class="frequency === 'monthly' ? 'border-brand-blue bg-brand-blue text-white' : 'border-gray-200 text-gray-500 hover:border-brand-blue hover:text-brand-blue'">
+                                        Monthly
+                                    </button>
+                                    <button type="button" @click="frequency = 'annual'"
+                                        class="py-3 text-sm font-semibold border-2 rounded-xl transition-colors"
+                                        :class="frequency === 'annual' ? 'border-brand-blue bg-brand-blue text-white' : 'border-gray-200 text-gray-500 hover:border-brand-blue hover:text-brand-blue'">
+                                        Annual
+                                    </button>
                                 </div>
                             </div>
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Monthly Amount (NGN)</label>
+                                <label class="block text-sm font-medium text-gray-700 mb-2" x-text="frequency === 'monthly' ? 'Monthly Amount (NGN)' : 'Annual Amount (NGN)'">Monthly Amount (NGN)</label>
                                 <div class="grid grid-cols-3 gap-3 mb-3">
                                     @foreach(['1,000', '2,500', '5,000', '10,000', '25,000'] as $amount)
-                                        <button class="py-2.5 text-sm font-semibold border border-gray-200 rounded-xl hover:border-brand-blue hover:text-brand-blue transition-colors">
+                                        <button type="button"
+                                            @click="selectedAmount = '{{ $amount }}'"
+                                            class="py-2.5 text-sm font-semibold border rounded-xl transition-colors"
+                                            :class="selectedAmount === '{{ $amount }}' ? 'border-brand-blue bg-brand-blue text-white' : 'border-gray-200 hover:border-brand-blue hover:text-brand-blue'">
                                             ₦{{ $amount }}
                                         </button>
                                     @endforeach
@@ -108,14 +122,14 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 @foreach([
-                    ['🌿', 'Widow Empowerment', 'W2W Programme', 'widows'],
-                    ['📚', 'Orphan Care', 'HOPE Fund', 'hope'],
-                    ['🤝', 'Elderly Care', 'Golden Care Network', 'elderly'],
-                    ['✝️', 'Missions Support', 'EMS Partnership', 'missions'],
-                    ['🕊️', 'New Convert Care', "Deborah's Basket", 'new-converts'],
+                    ['fa-solid fa-hands-holding-heart', 'Widow Empowerment', 'W2W Programme', 'widows'],
+                    ['fa-solid fa-book-open', 'Orphan Care', 'HOPE Fund', 'hope'],
+                    ['fa-solid fa-person-cane', 'Elderly Care', 'Golden Care Network', 'elderly'],
+                    ['fa-solid fa-cross', 'Missions Support', 'EMS Partnership', 'missions'],
+                    ['fa-solid fa-dove', 'New Convert Care', "Deborah's Basket", 'new-converts'],
                 ] as [$icon, $name, $initiative, $fund])
                     <div class="bg-white rounded-2xl p-6 border border-purple-100 shadow-sm text-center">
-                        <p class="text-3xl mb-3">{{ $icon }}</p>
+                        <div class="text-3xl text-brand-blue mb-3"><i class="{{ $icon }}"></i></div>
                         <h4 class="font-bold text-brand-blue">{{ $name }}</h4>
                         <p class="text-brand-gold text-xs font-semibold mt-1">{{ $initiative }}</p>
                         <a href="?fund={{ $fund }}" class="mt-4 inline-block px-5 py-2 bg-brand-blue text-white rounded-lg text-sm font-semibold hover:bg-brand-blue-light transition-colors">

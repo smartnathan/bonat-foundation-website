@@ -14,7 +14,7 @@
                     <h2 class="text-3xl font-bold text-brand-blue leading-tight">
                         Mama Deborah Iya Bonat
                     </h2>
-                    <p class="mt-2 text-brand-blue/60 text-sm">[Birth Year] – [Year of Passing]</p>
+                    <p class="mt-2 text-brand-blue/60 text-sm">1957 – 23rd March, 2026</p>
                     <div class="mt-5 space-y-4 text-gray-600 leading-relaxed">
                         <p>
                             For 29 years, Mama Deborah walked the long road of widowhood — not with bitterness, but with
@@ -29,11 +29,14 @@
                     <a href="{{ route('about.founder') }}"
                        class="mt-7 inline-flex items-center gap-2 px-6 py-3 bg-brand-blue text-white rounded-xl font-semibold text-sm hover:bg-brand-blue-light transition-colors">
                         Read Her Full Story
-                        <span>→</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
                 </div>
-                <div class="aspect-[4/3] bg-gray-100 rounded-3xl flex items-center justify-center text-gray-300 text-sm border border-gray-200">
-                    [Photo of Mama Deborah — replace me]
+                <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-gray-200 shadow-sm">
+                    <img src="/images/homepage-banner/deborah-bonat-homepage-three.webp"
+                         alt="Mama Deborah Iya Bonat"
+                         class="w-full h-full object-cover object-top"
+                         style="filter: contrast(1.05) brightness(1.02) saturate(1.1);">
                 </div>
             </div>
         </div>
@@ -73,15 +76,15 @@
                     <h3 class="text-xl font-bold text-brand-blue mb-6">Core Values</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         @foreach([
-                            ['🙏', 'Faith', 'Every action is rooted in obedience to Christ\'s call to serve the least.'],
-                            ['💛', 'Compassion', 'We lead with empathy, not pity — dignifying each person we serve.'],
-                            ['🤝', 'Integrity', 'Transparent governance and accountable stewardship of every gift.'],
-                            ['🌱', 'Resilience', 'We believe every story of suffering can become a story of strength.'],
-                            ['🏘️', 'Community', 'We work with, not just for, the communities we serve.'],
-                            ['✝️', 'Legacy', 'We carry a torch lit by a woman who gave everything — we will not let it dim.'],
+                            ['fa-solid fa-hands-praying', 'Faith', 'Every action is rooted in obedience to Christ\'s call to serve the least.'],
+                            ['fa-solid fa-heart', 'Compassion', 'We lead with empathy, not pity — dignifying each person we serve.'],
+                            ['fa-solid fa-handshake', 'Integrity', 'Transparent governance and accountable stewardship of every gift.'],
+                            ['fa-solid fa-seedling', 'Resilience', 'We believe every story of suffering can become a story of strength.'],
+                            ['fa-solid fa-people-group', 'Community', 'We work with, not just for, the communities we serve.'],
+                            ['fa-solid fa-cross', 'Legacy', 'We carry a torch lit by a woman who gave everything — we will not let it dim.'],
                         ] as [$icon, $value, $desc])
                             <div class="bg-brand-cream rounded-xl p-4 border border-purple-100">
-                                <p class="text-2xl mb-2">{{ $icon }}</p>
+                                <i class="{{ $icon }} text-brand-blue text-xl mb-2 block"></i>
                                 <h4 class="font-semibold text-brand-blue text-sm">{{ $value }}</h4>
                                 <p class="text-gray-500 text-xs mt-1 leading-relaxed">{{ $desc }}</p>
                             </div>

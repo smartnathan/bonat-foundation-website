@@ -11,7 +11,9 @@
 
                 <a href="{{ route('get-involved.donate') }}"
                    class="group bg-white rounded-3xl p-8 border border-purple-100 shadow-sm hover:shadow-md hover:border-brand-gold/40 transition-all flex flex-col">
-                    <div class="w-14 h-14 rounded-xl bg-brand-gold/10 flex items-center justify-center text-2xl mb-5">💛</div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-gold/10 flex items-center justify-center text-2xl text-brand-gold mb-5">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
                     <h3 class="text-xl font-bold text-brand-blue group-hover:text-brand-gold transition-colors">Donation Portal</h3>
                     <p class="mt-3 text-gray-500 text-sm leading-relaxed flex-grow">
                         Give a one-time gift or set up a recurring Legacy Gift. Every contribution directly funds one
@@ -24,7 +26,9 @@
 
                 <a href="{{ route('get-involved.volunteer') }}"
                    class="group bg-white rounded-3xl p-8 border border-purple-100 shadow-sm hover:shadow-md hover:border-brand-gold/40 transition-all flex flex-col">
-                    <div class="w-14 h-14 rounded-xl bg-brand-blue/10 flex items-center justify-center text-2xl mb-5">🤝</div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-blue/10 flex items-center justify-center text-2xl text-brand-blue mb-5">
+                        <i class="fa-solid fa-hands-holding-heart"></i>
+                    </div>
                     <h3 class="text-xl font-bold text-brand-blue group-hover:text-brand-gold transition-colors">Volunteer Hub</h3>
                     <p class="mt-3 text-gray-500 text-sm leading-relaxed flex-grow">
                         Sign up as a field worker, skills trainer, mentor, or community coordinator. Your time and
@@ -37,7 +41,9 @@
 
                 <a href="{{ route('get-involved.corporate') }}"
                    class="group bg-white rounded-3xl p-8 border border-purple-100 shadow-sm hover:shadow-md hover:border-brand-gold/40 transition-all flex flex-col">
-                    <div class="w-14 h-14 rounded-xl bg-brand-blue/10 flex items-center justify-center text-2xl mb-5">🏢</div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-blue/10 flex items-center justify-center text-2xl text-brand-blue mb-5">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
                     <h3 class="text-xl font-bold text-brand-blue group-hover:text-brand-gold transition-colors">Corporate Partnerships</h3>
                     <p class="mt-3 text-gray-500 text-sm leading-relaxed flex-grow">
                         See how your organisation can adopt a pillar, sponsor a program year, or co-host a
@@ -50,7 +56,9 @@
 
                 <a href="{{ route('get-involved.faith') }}"
                    class="group bg-white rounded-3xl p-8 border border-purple-100 shadow-sm hover:shadow-md hover:border-brand-gold/40 transition-all flex flex-col">
-                    <div class="w-14 h-14 rounded-xl bg-brand-blue/10 flex items-center justify-center text-2xl mb-5">✝️</div>
+                    <div class="w-14 h-14 rounded-xl bg-brand-blue/10 flex items-center justify-center text-2xl text-brand-blue mb-5">
+                        <i class="fa-solid fa-cross"></i>
+                    </div>
                     <h3 class="text-xl font-bold text-brand-blue group-hover:text-brand-gold transition-colors">Faith-Based Collaboration</h3>
                     <p class="mt-3 text-gray-500 text-sm leading-relaxed flex-grow">
                         For churches, ECWA congregations, and EMS partner organisations. Learn how your congregation
