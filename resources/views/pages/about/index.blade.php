@@ -2,7 +2,7 @@
 
     <x-site.hero
         title="About The Deborah Bonat Foundation"
-        subtitle="Born from a life of faithful service, the foundation carries forward a 29-year legacy of love."
+        subtitle="Empowering widows, orphans, the elderly, missionaries, and new converts to live with dignity, hope, and self-sufficiency."
     />
 
     {{-- Founder Teaser --}}
@@ -55,11 +55,10 @@
                     <h3 class="text-xl font-bold text-brand-blue mb-6">Our Objectives</h3>
                     <div class="space-y-4">
                         @foreach([
-                            ['Empower Widows', 'Provide skills, training, and economic pathways so that widows become self-sufficient workers and community contributors.'],
-                            ['Educate Orphans', 'Sponsor orphaned children through school from primary to tertiary level via the HOPE Fund.'],
-                            ['Dignify the Elderly', 'Deliver food, clothing, firewood, and companionship to elderly people who are isolated or neglected.'],
-                            ['Support Missionaries', 'Give direct material and spiritual support to local missionaries and EMS field workers.'],
-                            ['Nurture New Converts', 'Provide shelter, care packages, and discipleship for new believers facing persecution from family or community.'],
+                            ['Direct Aid & Advocacy', 'Provide direct aid, resources, education, vocational training, spiritual support, and advocacy for widows, orphans, the elderly, mission initiatives, and new Christian converts facing persecution and displacement in Nigeria.'],
+                            ['Sustainable Solutions', 'Foster sustainable solutions that address the root causes of vulnerability within these communities, enabling long-term self-reliance.'],
+                            ['Strategic Collaboration', 'Collaborate with local churches, organisations, and government agencies to maximise impact and reach across Nigeria.'],
+                            ['Embody Deborah\'s Spirit', 'Embody the compassionate spirit and dedication exemplified by Deborah I. Bonat — serving without question or hesitation.'],
                         ] as [$obj, $desc])
                             <div class="flex gap-4">
                                 <div class="w-2 h-2 rounded-full bg-brand-gold mt-2 shrink-0"></div>
@@ -76,12 +75,13 @@
                     <h3 class="text-xl font-bold text-brand-blue mb-6">Core Values</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         @foreach([
-                            ['fa-solid fa-hands-praying', 'Faith', 'Every action is rooted in obedience to Christ\'s call to serve the least.'],
-                            ['fa-solid fa-heart', 'Compassion', 'We lead with empathy, not pity — dignifying each person we serve.'],
-                            ['fa-solid fa-handshake', 'Integrity', 'Transparent governance and accountable stewardship of every gift.'],
-                            ['fa-solid fa-seedling', 'Resilience', 'We believe every story of suffering can become a story of strength.'],
-                            ['fa-solid fa-people-group', 'Community', 'We work with, not just for, the communities we serve.'],
-                            ['fa-solid fa-cross', 'Legacy', 'We carry a torch lit by a woman who gave everything — we will not let it dim.'],
+                            ['fa-solid fa-heart', 'Compassion', 'Driven by empathy and a genuine desire to alleviate suffering.'],
+                            ['fa-solid fa-handshake', 'Integrity', 'Operating with transparency, accountability, and ethical practices.'],
+                            ['fa-solid fa-bolt', 'Empowerment', 'Equipping beneficiaries with the skills and resources to become self-reliant.'],
+                            ['fa-solid fa-crown', 'Dignity', 'Treating every individual with respect and recognising their inherent worth.'],
+                            ['fa-solid fa-hands-praying', 'Faith-Based Action', 'Rooted in Christian principles of love, service, and justice.'],
+                            ['fa-solid fa-people-group', 'Collaboration', 'Working in partnership to achieve greater impact.'],
+                            ['fa-solid fa-seedling', 'Sustainability', 'Implementing programmes that foster long-term positive change.'],
                         ] as [$icon, $value, $desc])
                             <div class="bg-brand-cream rounded-xl p-4 border border-purple-100">
                                 <i class="{{ $icon }} text-brand-blue text-xl mb-2 block"></i>
@@ -108,9 +108,9 @@
                 <h3 class="text-xl font-bold text-brand-blue mb-8 text-center">Board of Trustees</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     @foreach([
-                        ['Deborah I. Bonat', 'Founder & Patron (In Memoriam)', 'The heart and inspiration of the foundation.'],
-                        ['Joy Bulus', 'Board of Trustees Member', ''],
-                        ['Blessing Swanta Bonat', 'Board of Trustees Member', ''],
+                        ['Deborah I. Bonat', 'Founder & President (In Memoriam)', 'The heart, vision, and inspiration of the foundation.'],
+                        ['Joy Bulus', 'Treasurer', ''],
+                        ['Blessing Swanta Bonat', 'Secretary', ''],
                     ] as [$name, $role, $note])
                         <div class="bg-white rounded-2xl p-6 border border-purple-100 shadow-sm text-center">
                             <div class="w-16 h-16 rounded-full bg-brand-blue/10 flex items-center justify-center mx-auto mb-4 text-brand-blue font-bold text-xl border-2 border-brand-gold/20">
@@ -149,22 +149,25 @@
 
             {{-- Operations --}}
             <div class="bg-white rounded-3xl p-8 border border-purple-100 shadow-sm">
-                <h3 class="text-xl font-bold text-brand-blue mb-4">The Operations Team</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                        <h4 class="font-semibold text-gray-800 mb-2">Program Managers</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">
-                            Each of the five pillars is overseen by a dedicated Program Manager responsible for
-                            budgeting, implementation, and beneficiary reporting.
-                        </p>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-gray-800 mb-2">Field Officers</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed">
-                            Field Officers are community-embedded volunteers and staff who carry out ground-level
-                            distribution, visitation, and beneficiary identification.
-                        </p>
-                    </div>
+                <h3 class="text-xl font-bold text-brand-blue mb-6">The Operations Team</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    @foreach([
+                        ['fa-solid fa-user-tie', 'Executive Director', 'Responsible for day-to-day operations, programme implementation, and staff management.'],
+                        ['fa-solid fa-clipboard-list', 'Program Managers', 'Each of the five pillars is overseen by a dedicated manager responsible for budgeting, delivery, and beneficiary reporting.'],
+                        ['fa-solid fa-people-carry-box', 'Field Officers & Social Workers', 'Community-embedded staff directly involved in beneficiary identification, needs assessment, and programme delivery.'],
+                        ['fa-solid fa-file-invoice', 'Administrative & Support Staff', 'Handling finance, communications, fundraising, and logistics to keep the foundation running effectively.'],
+                        ['fa-solid fa-hands-holding-circle', 'Volunteer Network', 'Community members engaged across all programmes — visiting, training, mentoring, and distributing.'],
+                    ] as [$icon, $title, $desc])
+                        <div class="flex gap-3 items-start">
+                            <div class="w-9 h-9 rounded-lg bg-brand-blue/10 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="{{ $icon }} text-brand-blue text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 text-sm">{{ $title }}</h4>
+                                <p class="text-gray-500 text-xs mt-1 leading-relaxed">{{ $desc }}</p>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>

@@ -55,23 +55,23 @@
                         style="display: none"
                     >
                         <a href="{{ route('programs.index') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
-                            <span class="text-lg"></span> All Programs
+                            <i class="fa-solid fa-table-cells-large w-4 text-center text-brand-blue/50"></i> All Programs
                         </a>
                         <div class="border-t border-gray-100 my-1"></div>
                         <a href="{{ route('programs.widows') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
-                            <span class="text-lg"></span> Widow Empowerment
+                            <i class="fa-solid fa-hands-holding-heart w-4 text-center text-brand-blue/50"></i> Widow Empowerment
                         </a>
                         <a href="{{ route('programs.orphans') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
-                            <span class="text-lg"></span> Orphan Care
+                            <i class="fa-solid fa-book-open w-4 text-center text-brand-blue/50"></i> Orphan Care
                         </a>
                         <a href="{{ route('programs.elderly') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
-                            <span class="text-lg"></span> Elderly Care
+                            <i class="fa-solid fa-person-cane w-4 text-center text-brand-blue/50"></i> Elderly Care
                         </a>
                         <a href="{{ route('programs.missions') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
-                            <span class="text-lg"></span> Missions Support
+                            <i class="fa-solid fa-cross w-4 text-center text-brand-blue/50"></i> Missions Support
                         </a>
                         <a href="{{ route('programs.new-converts') }}" class="dropdown-item flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-purple-50 hover:text-brand-blue">
-                            <span class="text-lg"></span> New Convert Care
+                            <i class="fa-solid fa-dove w-4 text-center text-brand-blue/50"></i> New Convert Care
                         </a>
                     </div>
                 </div>

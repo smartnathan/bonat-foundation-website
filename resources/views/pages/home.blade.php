@@ -46,9 +46,7 @@
             <div class="max-w-[520px]">
                 <p class="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-5">The Deborah Bonat Foundation</p>
                 <h1 class="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.1]">
-                    Turning Every Story<br>
-                    <span class="text-brand-gold">of Persecution</span><br>
-                    into Resilience
+                    A heart for the lost, <br>a home for the found: <span class="text-brand-gold">Sustaining the mission</span><br> Mama Deborah lived and died for.
                 </h1>
                 <p class="mt-6 text-white/70 text-lg leading-relaxed">
                     Serving widows, orphans, the elderly, missionaries, and new converts across Nigeria
@@ -95,8 +93,9 @@
                     </div>
                     <h3 class="text-xl font-bold text-brand-blue">Our Mission</h3>
                     <p class="mt-3 text-gray-600 leading-relaxed">
-                        To provide holistic support — spiritual, social, economic, and educational — to the most vulnerable
-                        in our communities, transforming suffering into strength and isolation into belonging.
+                        To empower vulnerable communities in Nigeria — including widows, orphans, the elderly, missionaries,
+                        and new Christian converts — by providing direct aid, resources, and sustainable support while
+                        collaborating with partners to maximise impact and embody a spirit of compassion.
                     </p>
                 </div>
                 <div class="bg-brand-blue rounded-3xl p-8 shadow-sm">
@@ -108,8 +107,8 @@
                     </div>
                     <h3 class="text-xl font-bold text-white">Our Vision</h3>
                     <p class="mt-3 text-white/70 leading-relaxed">
-                        A Nigeria where no widow is abandoned, no orphan is without hope, no elderly person is forgotten,
-                        no missionary labours without support, and no new convert faces persecution alone.
+                        To empower widows, orphans, the elderly, support missions, and provide holistic care for new
+                        Christian converts in Nigeria, enabling them to live with dignity, hope, and self-sufficiency.
                     </p>
                 </div>
             </div>

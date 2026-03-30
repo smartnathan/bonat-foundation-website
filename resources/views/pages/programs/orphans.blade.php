@@ -21,22 +21,24 @@
 
                 <h3 class="text-lg font-bold text-gray-800 mb-3">The Problem</h3>
                 <p class="text-gray-600 leading-relaxed mb-6">
-                    Millions of children in Nigeria grow up without one or both parents. Without sponsorship, many will
-                    never complete primary school. Education is the single most powerful investment in a child's future —
-                    and the HOPE Fund exists to make it possible.
+                    Millions of children in Nigeria — aged 0 to 18 — grow up without one or both parents. Without
+                    sponsorship, many will never complete primary school. Beyond education, orphaned children face
+                    trauma, instability, and the absence of guidance at the most formative period of their lives.
                 </p>
 
                 <h3 class="text-lg font-bold text-gray-800 mb-3">Our Response</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">
-                    The HOPE Fund provides full educational sponsorships — covering school fees, books, uniforms, and
-                    exam fees — from primary level through university, paired with mentorship and quarterly care visits.
+                    The Hope for Orphans Education Fund (HOPE Fund) delivers full educational sponsorships alongside
+                    shelter, mentorship, psychological support, and where possible, family reunification — giving every
+                    child a foundation for a dignified future.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
                     @foreach([
-                        ['School Fees', 'Full sponsorship of school fees from primary through tertiary'],
-                        ['Books & Uniforms', 'All materials needed to attend school with dignity'],
-                        ['Mentorship', 'Quarterly one-on-one mentorship sessions with trained volunteers'],
-                        ['Emergency Support', 'Emergency funds for medical care, meals, and crisis situations'],
+                        ['Educational Support', 'School fees, uniforms, learning materials, and after-school programmes from primary through tertiary level.'],
+                        ['Shelter & Care', 'Partnering with or establishing safe, nurturing homes for children in need of stable accommodation.'],
+                        ['Mentorship & Guidance', 'Connecting orphans with positive role models and trained mentors for regular guidance.'],
+                        ['Psychological Support', 'Trauma counselling and therapeutic interventions to support healing and emotional wellbeing.'],
+                        ['Family Reunification', 'Where appropriate and safe, working towards reintegrating children with extended family.'],
                     ] as [$title, $desc])
                         <div class="bg-brand-cream rounded-xl p-4 border border-purple-100">
                             <h4 class="font-semibold text-brand-blue text-sm">{{ $title }}</h4>

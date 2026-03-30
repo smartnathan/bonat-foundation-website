@@ -15,30 +15,32 @@
                     </div>
                     <div>
                         <h2 class="text-2xl font-bold text-brand-blue">Deborah's Basket</h2>
-                        <p class="text-brand-gold text-sm font-semibold">Monthly Care Package Programme</p>
+                        <p class="text-brand-gold text-sm font-semibold">New Convert Care Initiative</p>
                     </div>
                 </div>
 
                 <h3 class="text-lg font-bold text-gray-800 mb-3">The Problem</h3>
                 <p class="text-gray-600 leading-relaxed mb-6">
-                    When someone from a Muslim or other faith background converts to Christianity in parts of Northern
-                    Nigeria, they often face immediate and severe consequences: rejection by family, loss of housing,
-                    loss of income, and even physical danger. Many new converts find themselves entirely alone in the
-                    first critical weeks and months of their faith.
+                    New Christians in Nigeria — particularly those converting from Islam or other faiths in Northern Nigeria —
+                    frequently face persecution, rejection by family, loss of home and livelihood, and physical danger.
+                    Without immediate, holistic support, many are unable to sustain their faith or rebuild their lives.
+                    They need more than sympathy; they need a community that stands with them from day one.
                 </p>
 
                 <h3 class="text-lg font-bold text-gray-800 mb-3">Our Response</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">
-                    Deborah's Basket delivers monthly care packages — food, hygiene items, and basic household essentials —
-                    directly to new converts in crisis. Combined with emergency shelter placement and personal discipleship,
-                    the programme ensures that no one who chooses faith is left to face the consequences alone.
+                    Deborah's Basket provides a comprehensive care model for new converts facing persecution and displacement —
+                    combining immediate material relief with spiritual guidance, legal protection, skills development,
+                    and community integration. No one who chooses faith should face the consequences alone.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
                     @foreach([
-                        ['Monthly Basket', 'Food, hygiene, and household essentials delivered every month'],
-                        ['Emergency Shelter', 'Safe housing placement for converts who have lost their home'],
-                        ['Discipleship', 'One-on-one Bible study and faith formation with trained mentors'],
-                        ['Reintegration', 'Vocational support to help converts rebuild their livelihood'],
+                        ['Immediate Relief & Shelter', 'Emergency provision of food, clothing, hygiene essentials, and safe temporary housing for displaced converts.'],
+                        ['Trauma Counselling & Spiritual Guidance', 'Psychological support and discipleship mentorship to help new believers heal, grow, and remain steadfast in faith.'],
+                        ['Legal Aid & Advocacy', 'Connecting converts with legal resources and advocating for their rights in cases of persecution, discrimination, or property dispute.'],
+                        ['Educational & Vocational Training', 'Skills development, literacy programmes, and vocational training to equip converts for economic independence.'],
+                        ['Facilitating Integration', 'Connecting converts with local churches and Christian communities for belonging, accountability, and long-term discipleship.'],
+                        ['Financial Assistance', 'Micro-grants and financial support to help converts re-establish livelihoods and household stability after displacement.'],
                     ] as [$title, $desc])
                         <div class="bg-brand-cream rounded-xl p-4 border border-purple-100">
                             <h4 class="font-semibold text-brand-blue text-sm">{{ $title }}</h4>

@@ -76,10 +76,10 @@
                     <i class="fa-regular fa-comment-dots"></i>
                     Leave a Tribute
                 </a>
-                <a href="#donate"
+                <a href="#taraba"
                    class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-brand-gold text-brand-blue rounded-xl font-bold text-sm hover:bg-brand-gold-light transition-colors shadow-lg">
-                    <i class="fa-solid fa-heart"></i>
-                    Give in Her Memory
+                    <i class="fa-solid fa-seedling"></i>
+                    The Taraba Project
                 </a>
             </div>
 
@@ -178,48 +178,114 @@
     </section>
 
     {{-- ============================================================
-         FUNERAL DETAILS — May 1st
+         FUNERAL DETAILS — 30 Apr – 3 May 2026
     ============================================================ --}}
     <section class="py-16 bg-brand-blue/5 border-y border-blue-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
 
             <div class="text-center mb-10">
                 <p class="text-brand-gold text-xs font-semibold uppercase tracking-widest mb-2">Homegoing Celebration</p>
-                <h2 class="text-3xl font-bold text-brand-blue">Funeral &amp; Burial Details</h2>
+                <h2 class="text-3xl font-bold text-brand-blue">Funeral &amp; Burial Programme</h2>
                 <p class="mt-2 text-gray-500 text-sm">
                     <i class="fa-regular fa-calendar-check text-brand-gold mr-1"></i>
-                    Thursday, 1st May 2026 — Samaru Kataf, Kaduna State
+                    30th April – 3rd May 2026 — Samaru Kataf, Kaduna State
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
-                <div class="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm text-center">
-                    <div class="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center mx-auto mb-4">
-                        <i class="fa-solid fa-church text-brand-blue text-xl"></i>
+                <div class="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-brand-blue/10 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-fire-flame-curved text-brand-blue"></i>
+                        </div>
+                        <h3 class="text-brand-blue font-bold">Gospel Crusades</h3>
                     </div>
-                    <h3 class="text-brand-blue font-bold mb-1">Lying in State</h3>
-                    <p class="text-gray-500 text-sm">1st May 2026</p>
-                    <p class="text-gray-400 text-xs mt-1">[Venue TBC]</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-start gap-2 text-gray-600">
+                            <i class="fa-regular fa-calendar text-brand-gold mt-0.5 w-4 text-center shrink-0"></i>
+                            <span>30th April &amp; 1st May 2026</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-gray-600">
+                            <i class="fa-regular fa-clock text-brand-gold mt-0.5 w-4 text-center shrink-0"></i>
+                            <span>5:00 PM Daily</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-gray-600">
+                            <i class="fa-solid fa-location-dot text-brand-gold mt-0.5 w-4 text-center shrink-0"></i>
+                            <span>Roundabout Football Field, Samaru Kataf, Kaduna State</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm text-center ring-2 ring-brand-gold/30">
-                    <div class="w-12 h-12 rounded-xl bg-brand-gold/10 flex items-center justify-center mx-auto mb-4">
-                        <i class="fa-solid fa-cross text-brand-gold text-xl"></i>
+                <div class="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm ring-2 ring-brand-gold/30">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-brand-gold/10 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-cross text-brand-gold"></i>
+                        </div>
+                        <h3 class="text-brand-blue font-bold">Funeral Service</h3>
                     </div>
-                    <h3 class="text-brand-blue font-bold mb-1">Thanksgiving Service</h3>
-                    <p class="text-gray-500 text-sm">1st May 2026</p>
-                    <p class="text-gray-400 text-xs mt-1">[Church &amp; Time TBC]</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-start gap-2 text-gray-600">
+                            <i class="fa-regular fa-calendar text-brand-gold mt-0.5 w-4 text-center shrink-0"></i>
+                            <span>Friday, 1st May 2026</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-gray-400 italic">
+                            <i class="fa-regular fa-clock w-4 text-center shrink-0 mt-0.5"></i>
+                            <span>Time TBC</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-gray-600">
+                            <i class="fa-solid fa-location-dot text-brand-gold mt-0.5 w-4 text-center shrink-0"></i>
+                            <span>Samaru Kataf, Kaduna State</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm text-center">
-                    <div class="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center mx-auto mb-4">
-                        <i class="fa-solid fa-location-dot text-brand-blue text-xl"></i>
+                <div class="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-brand-blue/10 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-book-open text-brand-blue"></i>
+                        </div>
+                        <h3 class="text-brand-blue font-bold">Discipleship</h3>
                     </div>
-                    <h3 class="text-brand-blue font-bold mb-1">Interment</h3>
-                    <p class="text-gray-500 text-sm">1st May 2026</p>
-                    <p class="text-gray-400 text-xs mt-1">Samaru Kataf, Kaduna State</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-start gap-2 text-gray-600">
+                            <i class="fa-regular fa-calendar text-brand-gold mt-0.5 w-4 text-center shrink-0"></i>
+                            <span>Saturday, 2nd May 2026</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-gray-600">
+                            <i class="fa-regular fa-clock text-brand-gold mt-0.5 w-4 text-center shrink-0"></i>
+                            <span>10:00 AM</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-gray-600">
+                            <i class="fa-solid fa-location-dot text-brand-gold mt-0.5 w-4 text-center shrink-0"></i>
+                            <span>ECWA 1, Samaru Kataf, Kaduna State</span>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-brand-blue/10 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-hands-praying text-brand-blue"></i>
+                        </div>
+                        <h3 class="text-brand-blue font-bold">Thanksgiving Service</h3>
+                    </div>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-start gap-2 text-gray-600">
+                            <i class="fa-regular fa-calendar text-brand-gold mt-0.5 w-4 text-center shrink-0"></i>
+                            <span>Sunday, 3rd May 2026</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-gray-600">
+                            <i class="fa-regular fa-clock text-brand-gold mt-0.5 w-4 text-center shrink-0"></i>
+                            <span>10:00 AM</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-gray-600">
+                            <i class="fa-solid fa-location-dot text-brand-gold mt-0.5 w-4 text-center shrink-0"></i>
+                            <span>ECWA 1, Samaru Kataf, Kaduna State</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <div class="mt-8 bg-white rounded-2xl p-5 border border-blue-100 flex flex-col sm:flex-row items-center gap-4 justify-between">
@@ -240,6 +306,180 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    {{-- ============================================================
+         THE TARABA ADOPTION PROJECT — Living Memorial
+    ============================================================ --}}
+    <section id="taraba" class="py-20 bg-brand-dark">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+
+            {{-- Section header --}}
+            <div class="text-center mb-14">
+                <p class="text-brand-gold text-xs font-semibold uppercase tracking-widest mb-3">The Living Memorial</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white leading-tight">
+                    Flowers That <span class="text-brand-gold">Never Fade</span>
+                </h2>
+                <p class="mt-2 text-white/50 text-sm font-semibold uppercase tracking-wider">Finishing the Work in Taraba</p>
+            </div>
+
+            {{-- The Story --}}
+            <div class="bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-10 mb-12">
+                <p class="text-white/80 leading-relaxed text-base">
+                    On 23rd March 2026, Mama Deborah I. Bonat was returning from a successful mission in Taraba State —
+                    a journey of planting seeds, building hope, and expanding the Kingdom. While she has been called to
+                    her eternal rest, the mission she started remains. This is the report of what the Outreach, organised
+                    by the Evangelical Missionary Society (EMS) of ECWA, accomplished in her final days of service.
+                </p>
+            </div>
+
+            {{-- EMS Report header --}}
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-px flex-1 bg-white/10"></div>
+                <p class="text-brand-gold text-xs font-semibold uppercase tracking-widest shrink-0">EMS Outreach Report</p>
+                <div class="h-px flex-1 bg-white/10"></div>
+            </div>
+            <p class="text-center text-white/40 text-xs mb-8 -mt-4">
+                2026 Kebbi–Taraba Saturation Campaign &amp; Follow-Up Outreach · Concluded 22nd March 2026
+            </p>
+
+            {{-- EMS Impact stats --}}
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10">
+                @foreach([
+                    ['1,096', 'Missionaries &amp; Volunteers', 'fa-people-group'],
+                    ['5,198', 'New Converts', 'fa-dove'],
+                    ['27', 'New Churches Planted', 'fa-church'],
+                    ['45', 'Mission Fields Unoccupied', 'fa-map-location-dot'],
+                    ['53', 'Communities Need Schools', 'fa-graduation-cap'],
+                    ['84', 'Communities Need Boreholes', 'fa-droplet'],
+                ] as [$num, $label, $icon])
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 text-center">
+                        <i class="fa-solid {{ $icon }} text-brand-gold text-xl mb-2 block"></i>
+                        <p class="text-2xl font-bold text-white">{{ $num }}</p>
+                        <p class="text-white/50 text-xs mt-1 leading-snug">{!! $label !!}</p>
+                    </div>
+                @endforeach
+            </div>
+
+            {{-- EMS Director quote --}}
+            <div class="border-l-4 border-brand-gold pl-6 mb-12">
+                <p class="text-white/75 text-sm italic leading-relaxed">
+                    "Our utmost condolence to the families of our heroes and heroines of faith for losing their lives
+                    in the cause of this Outreach. May God grant you the fortitude to bear this loss."
+                </p>
+                <p class="mt-3 text-brand-gold/70 text-xs font-semibold">— MacPhillips E.D., EMS Director</p>
+            </div>
+
+            {{-- Foundation's Commitment --}}
+            <div class="flex items-center gap-4 mb-6">
+                <div class="h-px flex-1 bg-white/10"></div>
+                <p class="text-brand-gold text-xs font-semibold uppercase tracking-widest shrink-0">The Foundation's Response</p>
+                <div class="h-px flex-1 bg-white/10"></div>
+            </div>
+
+            <div class="bg-brand-gold/10 border border-brand-gold/30 rounded-3xl p-8 mb-12">
+                <p class="text-white/85 leading-relaxed">
+                    In her honor, The Deborah Bonat Foundation has committed to returning to the very field where she
+                    last laboured. We are officially <strong class="text-brand-gold">adopting a newly planted church
+                    in Taraba</strong> — ensuring the work she began reaches its full fruition.
+                </p>
+                <p class="mt-4 text-white/65 leading-relaxed text-sm">
+                    Many have asked how to honor her memory. In lieu of traditional funeral flowers, we invite you to
+                    contribute to <strong class="text-white">The Taraba Adoption Project</strong>. Your gift will not
+                    wilt — it will become the walls of a church, the roof of a clinic, and the education of a child.
+                    Let us build a living memorial in the heart of Taraba.
+                </p>
+            </div>
+
+            {{-- Project funding breakdown --}}
+            <h3 class="text-white font-bold text-xl mb-6 text-center">Funding the Harvest: Project Breakdown</h3>
+            <div class="space-y-3 mb-10">
+                @foreach([
+                    ['fa-church',           'The Church Building',   'A permanent sanctuary for the new converts.',                    '₦6,500,000', 'church-building'],
+                    ['fa-graduation-cap',   'The School',            'Providing a future for the children of the mission field.',      '₦5,500,000', 'school'],
+                    ['fa-house',            'The Missionary House',  'A safe, dignified home for those labouring in the field.',       '₦5,500,000', 'missionary-house'],
+                    ['fa-kit-medical',      'The Community Clinic',  'Health and healing as a tool for evangelism.',                   '₦4,000,000', 'community-clinic'],
+                    ['fa-droplet',          'Clean Water (Borehole)','Life-giving water for the entire community.',                    '₦2,500,000', 'borehole'],
+                    ['fa-motorcycle',       'Missionary Mobility',   'A motorcycle for the Pastor to reach distant villages.',         '₦1,500,000', 'motorcycle'],
+                    ['fa-hand-holding-heart','Missionary Support',   'Annual salary for the resident laborer.',                        '₦600,000',   'missionary-support'],
+                ] as [$icon, $title, $desc, $amount, $item])
+                    <div class="flex items-center gap-4 bg-white/5 border border-white/10 rounded-xl px-5 py-4 hover:border-brand-gold/30 transition-colors group">
+                        <div class="w-10 h-10 rounded-lg bg-brand-gold/10 flex items-center justify-center shrink-0 group-hover:bg-brand-gold/20 transition-colors">
+                            <i class="fa-solid {{ $icon }} text-brand-gold text-sm"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <p class="text-white font-semibold text-sm">{{ $title }}</p>
+                            <p class="text-white/45 text-xs mt-0.5">{{ $desc }}</p>
+                        </div>
+                        <div class="shrink-0 text-right">
+                            <p class="text-brand-gold font-bold text-sm">{{ $amount }}</p>
+                            <a href="{{ route('get-involved.donate') }}?fund=taraba&amp;item={{ $item }}"
+                               class="text-white/35 text-xs hover:text-brand-gold transition-colors mt-0.5 block">
+                                Fund this &rarr;
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            {{-- Progress bar --}}
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8"
+                 x-data="{ target: 26100000, raised: 0 }"
+                 x-init="setTimeout(() => raised = 0, 400)">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <p class="text-white font-bold text-sm">Project Fund Progress</p>
+                        <p class="text-white/40 text-xs mt-0.5">Every gift builds a living memorial in Taraba</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-brand-gold font-bold text-xl" x-text="'₦' + raised.toLocaleString()">₦0</p>
+                        <p class="text-white/35 text-xs">of ₦26,100,000 goal</p>
+                    </div>
+                </div>
+                <div class="h-3 bg-white/10 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-brand-gold to-brand-gold-light rounded-full transition-all duration-1000 ease-out"
+                         :style="'width: ' + Math.max(Math.min((raised / target) * 100, 100), 0.5) + '%'">
+                    </div>
+                </div>
+                <div class="mt-2.5 flex justify-between text-white/25 text-xs">
+                    <span>₦0</span>
+                    <span>₦13.05M</span>
+                    <span>₦26.1M</span>
+                </div>
+            </div>
+
+            {{-- How to Give --}}
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-10">
+                <h4 class="text-white font-bold mb-5 flex items-center gap-2">
+                    <i class="fa-solid fa-circle-info text-brand-gold"></i>
+                    How to Give Your "Digital Flower"
+                </h4>
+                <ol class="space-y-3">
+                    @foreach([
+                        'Click the <strong class="text-white">Donate to the Taraba Project</strong> button below.',
+                        'Select the specific item you wish to fund, or choose <strong class="text-white">General Taraba Fund</strong>.',
+                        'Include a dedication: <em class="text-white/80">"In Memory of Mama Deborah"</em> or a personal message for the family.',
+                        'Every donor to this project receives a digital <strong class="text-brand-gold">Legacy Partner Certificate</strong> and regular progress updates from the Taraba mission station.',
+                    ] as $i => $step)
+                        <li class="flex items-start gap-3 text-white/55 text-sm leading-relaxed">
+                            <span class="w-5 h-5 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">{{ $i + 1 }}</span>
+                            {!! $step !!}
+                        </li>
+                    @endforeach
+                </ol>
+            </div>
+
+            {{-- CTA --}}
+            <div class="text-center">
+                <a href="{{ route('get-involved.donate') }}?fund=taraba"
+                   class="inline-flex items-center gap-3 px-10 py-4 bg-brand-gold text-brand-blue rounded-xl font-bold text-base hover:bg-brand-gold-light transition-colors shadow-lg shadow-brand-gold/20">
+                    <i class="fa-solid fa-seedling"></i>
+                    Donate to the Taraba Project
+                </a>
+                <p class="mt-4 text-white/25 text-xs">Secure giving · Bank transfer available · Receipt provided to every donor</p>
+            </div>
+
         </div>
     </section>
 

@@ -22,22 +22,23 @@
                 <h3 class="text-lg font-bold text-gray-800 mb-3">The Problem</h3>
                 <p class="text-gray-600 leading-relaxed mb-6">
                     Widowhood in Nigeria is often compounded by economic vulnerability, social isolation, and cultural
-                    stigma. Many women who lose their husbands lose their primary income source, their home, and sometimes
-                    even their standing in the community — all at once.
+                    stigma. Many women who lose their husbands lose their primary income source, their home, and
+                    their standing in the community — all at once. Widows in underserved rural communities are
+                    especially at risk, with limited access to support systems or legal protection.
                 </p>
 
                 <h3 class="text-lg font-bold text-gray-800 mb-3">Our Response</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">
-                    The Widows to Workers (W2W) initiative equips widows with practical skills — tailoring, soap-making,
-                    food processing, agriculture, and digital literacy — combined with business seed grants, mentorship,
-                    and a supportive community of peers.
+                    The Widows to Workers (W2W) initiative provides a holistic support model — combining economic
+                    empowerment, psychosocial care, healthcare access, and skills development so that widows can
+                    rebuild their lives with dignity and independence.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
                     @foreach([
-                        ['Skills Training', '3–6 month vocational programmes in high-demand trades'],
-                        ['Seed Grants', 'Micro-grants to help participants launch their first business'],
-                        ['Peer Circles', 'Monthly support groups for accountability and encouragement'],
-                        ['Spiritual Care', 'Chaplaincy and grief counselling integrated into every cohort'],
+                        ['Economic Empowerment', 'Vocational training (tailoring, small business management), micro-grants, and access to savings and loan schemes.'],
+                        ['Psychosocial Support', 'Grief counselling, support groups, and legal aid awareness on inheritance rights and community standing.'],
+                        ['Health & Well-being', 'Health awareness programmes and facilitated access to basic healthcare services.'],
+                        ['Skills Development', 'Literacy, numeracy, and life skills training to build long-term independence and confidence.'],
                     ] as [$title, $desc])
                         <div class="bg-brand-cream rounded-xl p-4 border border-purple-100">
                             <h4 class="font-semibold text-brand-blue text-sm">{{ $title }}</h4>

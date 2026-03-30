@@ -23,21 +23,22 @@
                 <p class="text-gray-600 leading-relaxed mb-6">
                     Local missionaries in Nigeria — particularly those serving in rural or unreached communities —
                     often labour with minimal financial support. They bear significant personal costs while carrying
-                    the gospel into difficult places. Many become discouraged and abandon their calling for lack of basic support.
+                    the gospel into difficult places. Many become discouraged and abandon their calling for lack of
+                    basic resources, training, or logistical support.
                 </p>
 
                 <h3 class="text-lg font-bold text-gray-800 mb-3">Our Response</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">
-                    Mama Deborah was a faithful supporter of the ECWA Missionary Society (EMS). The foundation continues
-                    that partnership — providing direct material aid, encouragement packages, and prayer support for
-                    missionaries in the field.
+                    Mama Deborah was a faithful supporter of the ECWA Missionary Society (EMS). The foundation
+                    continues that partnership — providing financial grants, resources, training, and logistical
+                    support so that no indigenous missionary labours without the backing they deserve.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
                     @foreach([
-                        ['Material Aid', 'Food, clothing, and essential supplies for missionary families'],
-                        ['EMS Partnership', 'Formal partnership with ECWA Missionary Society for field coordination'],
-                        ['Prayer Networks', 'Organised intercessory prayer covering active missionaries'],
-                        ['Crisis Support', 'Emergency fund for missionaries facing persecution or disaster'],
+                        ['Financial Grants', 'Funding for local missionaries and projects — evangelism, church planting, and community development.'],
+                        ['Resource Provision', 'Supplying essential materials and equipment for mission work in the field.'],
+                        ['Training & Capacity Building', 'Supporting the training and development of indigenous missionaries for greater effectiveness.'],
+                        ['Logistical Support', 'Assisting with transportation and other operational needs for field missionaries.'],
                     ] as [$title, $desc])
                         <div class="bg-brand-cream rounded-xl p-4 border border-purple-100">
                             <h4 class="font-semibold text-brand-blue text-sm">{{ $title }}</h4>

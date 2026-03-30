@@ -21,23 +21,24 @@
 
                 <h3 class="text-lg font-bold text-gray-800 mb-3">The Problem</h3>
                 <p class="text-gray-600 leading-relaxed mb-6">
-                    Many elderly people in Nigerian communities have given everything — to their families, their churches,
-                    their villages — and are now living in neglect or isolation. Rising costs, family migration, and
-                    economic hardship mean that the elderly are often the most invisible members of society.
+                    Elderly persons aged 65 and above — particularly those without adequate family or social support —
+                    are among the most invisible members of Nigerian society. Rising costs, family migration, and economic
+                    hardship leave them without basic necessities, healthcare, or companionship.
                 </p>
 
                 <h3 class="text-lg font-bold text-gray-800 mb-3">Our Response</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">
-                    Mama Deborah herself ran distributions of firewood, food, and clothing in Jos for years. The Golden
-                    Care Network (GCN) formalises and scales that work — bringing practical care, regular visitation,
-                    and dignity-restoration to elderly people across Nigeria.
+                    Mama Deborah spent years personally distributing firewood, food, and clothing in Jos. The Golden
+                    Care Network (GCN) formalises and scales that legacy — providing basic needs support, healthcare
+                    access, social inclusion, home care, and active advocacy for the elderly across Nigeria.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
                     @foreach([
-                        ['Quarterly Distributions', 'Food, firewood, and clothing distributions four times a year'],
-                        ['Welfare Visits', 'Regular home visits by trained volunteers to check on wellbeing'],
-                        ['Medical Support', 'Linking elderly beneficiaries to basic healthcare and medication'],
-                        ['Companionship', 'Organised social events and fellowship gatherings to combat isolation'],
+                        ['Basic Needs Support', 'Regular provision of food, clothing, and hygiene supplies to vulnerable households.'],
+                        ['Healthcare Access', 'Facilitating access to medical check-ups, mobile clinics, and essential care.'],
+                        ['Social Inclusion', 'Community activities and fellowship events to combat isolation and loneliness.'],
+                        ['Home Care Support', 'Assistance with daily living activities for those unable to manage alone.'],
+                        ['Advocacy', 'Raising awareness about the needs and rights of elderly people in Nigeria.'],
                     ] as [$title, $desc])
                         <div class="bg-brand-cream rounded-xl p-4 border border-purple-100">
                             <h4 class="font-semibold text-brand-blue text-sm">{{ $title }}</h4>
