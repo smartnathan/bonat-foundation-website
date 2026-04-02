@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Donations\Schemas;
 
+use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Split;
@@ -94,6 +95,26 @@ class DonationInfolist
                         ])
                         ->grow(false),
                 ])->from('lg'),
+
+                Section::make('Transfer Receipt')
+                    ->icon('heroicon-o-paper-clip')
+                    ->components([
+                        TextEntry::make('receipt_path')
+                            ->label('Receipt File')
+                            ->placeholder('No receipt uploaded')
+                            ->formatStateUsing(fn (?string $state): string => $state ? basename($state) : '—')
+                            ->url(fn (?string $state): ?string => $state ? route('admin.donation.receipt', ['path' => $state]) : null)
+                            ->openUrlInNewTab(),
+
+                        ImageEntry::make('receipt_path')
+                            ->label('Preview')
+                            ->disk('local')
+                            ->visibility('public')
+                            ->height(300)
+                            ->hidden(fn ($record): bool => ! $record?->receipt_path || str_ends_with((string) $record->receipt_path, '.pdf')),
+                    ])
+                    ->hidden(fn ($record): bool => ! $record?->receipt_path)
+                    ->columns(1),
             ]);
     }
 }

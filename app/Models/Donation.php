@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
     'payment_method', 'payment_type', 'payment_status',
     'payment_reference', 'payment_date',
     'donor_name', 'donor_email', 'donor_phone',
+    'receipt_path',
 ])]
 class Donation extends Model
 {

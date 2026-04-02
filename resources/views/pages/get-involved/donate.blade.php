@@ -102,17 +102,125 @@
                         </div>
                     </div>
 
-                    <div class="mt-8 p-5 bg-brand-cream rounded-2xl border border-purple-100">
-                        <p class="text-brand-blue font-semibold text-sm mb-1">Bank Transfer Details</p>
-                        <p class="text-gray-500 text-sm">Bank: <span class="font-medium text-gray-700">[Bank Name TBC]</span></p>
-                        <p class="text-gray-500 text-sm">Account Name: <span class="font-medium text-gray-700">The Deborah Bonat Foundation</span></p>
-                        <p class="text-gray-500 text-sm">Account Number: <span class="font-medium text-gray-700">[Account No. TBC]</span></p>
-                        <p class="text-gray-400 text-xs mt-3">Online payment gateway integration coming soon. Please use bank transfer in the meantime and <a href="{{ route('contact') }}" class="text-brand-blue underline">notify us</a> after payment.</p>
+                    {{-- Bank Transfer Details --}}
+                    <div class="mt-8 rounded-2xl border border-purple-100 overflow-hidden">
+                        <div class="bg-brand-blue px-5 py-3 flex items-center gap-2">
+                            <i class="fa-solid fa-building-columns text-brand-gold text-sm"></i>
+                            <p class="text-white font-semibold text-sm">Bank Transfer Details</p>
+                        </div>
+                        <div class="bg-brand-cream px-5 py-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-white rounded-xl p-4 border border-purple-100">
+                                <p class="text-brand-gold text-[10px] font-bold uppercase tracking-widest mb-2">Naira (NGN)</p>
+                                <p class="text-gray-800 font-bold text-sm">The Deborah Bonat Foundation</p>
+                                <p class="text-gray-500 text-sm mt-1">Account No: <span class="font-semibold text-gray-800 tracking-wider">1030010627</span></p>
+                                <p class="text-gray-500 text-sm">Bank: <span class="font-medium text-gray-700">United Bank for Africa (UBA)</span></p>
+                            </div>
+                            <div class="bg-white rounded-xl p-4 border border-purple-100">
+                                <p class="text-brand-gold text-[10px] font-bold uppercase tracking-widest mb-2">US Dollar (USD)</p>
+                                <p class="text-gray-800 font-bold text-sm">The Deborah Bonat Foundation</p>
+                                <p class="text-gray-500 text-sm mt-1">Account No: <span class="font-semibold text-gray-800 tracking-wider">3005112024</span></p>
+                                <p class="text-gray-500 text-sm">Bank: <span class="font-medium text-gray-700">United Bank for Africa (UBA)</span></p>
+                            </div>
+                        </div>
+                        <div class="bg-brand-cream px-5 pb-4">
+                            <p class="text-gray-400 text-xs">After your transfer, please submit your receipt below so we can confirm and acknowledge your gift.</p>
+                        </div>
                     </div>
 
-                    <button class="mt-6 w-full py-4 bg-brand-gold text-brand-blue rounded-xl font-bold hover:bg-brand-gold-light transition-colors text-sm">
-                        Proceed to Payment
-                    </button>
+                    <div class="mt-4 text-center text-gray-400 text-xs">
+                        Online payment gateway coming soon.
+                    </div>
+                </div>
+            </div>
+
+            {{-- Receipt Upload --}}
+            <div id="submit-receipt" class="mb-16 scroll-mt-16">
+                <div class="text-center mb-8">
+                    <p class="text-brand-gold text-xs font-semibold uppercase tracking-widest mb-2">Already Transferred?</p>
+                    <h3 class="text-2xl font-bold text-brand-blue">Submit Your Transfer Receipt</h3>
+                    <p class="mt-2 text-gray-500 text-sm max-w-lg mx-auto">
+                        Upload proof of your bank transfer and we will confirm your donation and send you an acknowledgement.
+                    </p>
+                </div>
+
+                <div class="max-w-xl mx-auto bg-white rounded-3xl border border-purple-100 shadow-sm p-8">
+
+                    @if(session('receipt_success'))
+                        <div class="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-green-500"></i>
+                            {{ session('receipt_success') }}
+                        </div>
+                    @endif
+
+                    <form action="{{ route('get-involved.donate.receipt.store') }}" method="POST" enctype="multipart/form-data" class="space-y-5">
+                        @csrf
+
+                        <div>
+                            <label for="receipt_donor_name" class="block text-sm font-medium text-gray-700 mb-1.5">
+                                <i class="fa-regular fa-user text-brand-blue/50 mr-1"></i>
+                                Name of Donor <span class="text-red-400">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                id="receipt_donor_name"
+                                name="donor_name"
+                                value="{{ old('donor_name') }}"
+                                required
+                                maxlength="100"
+                                class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue transition-colors @error('donor_name') border-red-400 @enderror"
+                                placeholder="Full name as used for the transfer"
+                            >
+                            @error('donor_name')
+                                <p class="mt-1 text-red-500 text-xs">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <div>
+                            <label for="receipt_amount" class="block text-sm font-medium text-gray-700 mb-1.5">
+                                <i class="fa-solid fa-naira-sign text-brand-blue/50 mr-1"></i>
+                                Amount Transferred <span class="text-red-400">*</span>
+                            </label>
+                            <input
+                                type="number"
+                                id="receipt_amount"
+                                name="amount"
+                                value="{{ old('amount') }}"
+                                required
+                                min="1"
+                                step="any"
+                                class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue transition-colors @error('amount') border-red-400 @enderror"
+                                placeholder="e.g. 25000"
+                            >
+                            @error('amount')
+                                <p class="mt-1 text-red-500 text-xs">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <div>
+                            <label for="receipt_file" class="block text-sm font-medium text-gray-700 mb-1.5">
+                                <i class="fa-regular fa-image text-brand-blue/50 mr-1"></i>
+                                Upload Receipt <span class="text-red-400">*</span>
+                                <span class="text-gray-400 font-normal">(JPG, PNG or PDF — max 5 MB)</span>
+                            </label>
+                            <input
+                                type="file"
+                                id="receipt_file"
+                                name="receipt"
+                                required
+                                accept="image/jpeg,image/png,image/webp,application/pdf"
+                                class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-brand-blue/10 file:text-brand-blue hover:file:bg-brand-blue/20 transition-colors @error('receipt') border border-red-400 rounded-xl p-2 @enderror"
+                            >
+                            @error('receipt')
+                                <p class="mt-1 text-red-500 text-xs">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <button type="submit"
+                                class="w-full py-3 bg-brand-blue text-white rounded-xl font-semibold text-sm hover:bg-brand-blue-light transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Submit Receipt
+                        </button>
+                    </form>
                 </div>
             </div>
 

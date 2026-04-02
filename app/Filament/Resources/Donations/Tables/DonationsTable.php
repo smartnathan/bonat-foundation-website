@@ -6,8 +6,10 @@ use App\Models\Donation;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\ViewAction;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Table;
 
 class DonationsTable
@@ -48,6 +50,15 @@ class DonationsTable
                         default => 'gray',
                     }),
 
+                IconColumn::make('receipt_path')
+                    ->label('Receipt')
+                    ->boolean()
+                    ->trueIcon('heroicon-o-paper-clip')
+                    ->falseIcon('heroicon-o-minus')
+                    ->trueColor('success')
+                    ->falseColor('gray')
+                    ->state(fn (Donation $record): bool => (bool) $record->receipt_path),
+
                 TextColumn::make('created_at')
                     ->label('Date')
                     ->since()
@@ -59,6 +70,9 @@ class DonationsTable
                     ->options(['pending' => 'Pending', 'completed' => 'Completed', 'failed' => 'Failed']),
                 SelectFilter::make('give_type')
                     ->options(['one-time' => 'One-Time', 'legacy' => 'Legacy (Recurring)']),
+                TernaryFilter::make('receipt_path')
+                    ->label('Has Receipt')
+                    ->nullable(),
             ])
             ->recordActions([ViewAction::make()])
             ->toolbarActions([

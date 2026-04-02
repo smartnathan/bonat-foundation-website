@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\CondolenceController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DonationReceiptController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\VolunteerController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 // Legacy Landing Page — temporary homepage before the funeral
 Route::get('/', [PageController::class, 'legacy'])->name('legacy');
@@ -30,6 +32,7 @@ Route::get('/impact', [PageController::class, 'impact'])->name('impact');
 Route::prefix('get-involved')->name('get-involved.')->group(function () {
     Route::get('/', [PageController::class, 'getInvolved'])->name('index');
     Route::get('/donate', [PageController::class, 'donate'])->name('donate');
+    Route::post('/donate/receipt', [DonationReceiptController::class, 'store'])->name('donate.receipt.store');
     Route::get('/volunteer', [PageController::class, 'volunteer'])->name('volunteer');
     Route::post('/volunteer', [VolunteerController::class, 'store'])->name('volunteer.store');
     Route::get('/corporate', [PageController::class, 'corporate'])->name('corporate');
@@ -40,3 +43,14 @@ Route::get('/media', [PageController::class, 'media'])->name('media');
 
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+// Admin: serve private donation receipt files
+Route::get('/admin/donation-receipt', function () {
+    $path = request()->query('path', '');
+
+    if (! $path || ! Storage::disk('local')->exists($path)) {
+        abort(404);
+    }
+
+    return Storage::disk('local')->response($path);
+})->middleware(['auth'])->name('admin.donation.receipt');
