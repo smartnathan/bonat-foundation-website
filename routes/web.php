@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CondolenceController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DonationController;
 use App\Http\Controllers\DonationReceiptController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\VolunteerController;
@@ -32,6 +33,8 @@ Route::get('/impact', [PageController::class, 'impact'])->name('impact');
 Route::prefix('get-involved')->name('get-involved.')->group(function () {
     Route::get('/', [PageController::class, 'getInvolved'])->name('index');
     Route::get('/donate', [PageController::class, 'donate'])->name('donate');
+    Route::post('/donate/prepare', [DonationController::class, 'prepare'])->name('donate.prepare');
+    Route::get('/donate/verify', [DonationController::class, 'verify'])->name('donate.verify');
     Route::post('/donate/receipt', [DonationReceiptController::class, 'store'])->name('donate.receipt.store');
     Route::get('/volunteer', [PageController::class, 'volunteer'])->name('volunteer');
     Route::post('/volunteer', [VolunteerController::class, 'store'])->name('volunteer.store');

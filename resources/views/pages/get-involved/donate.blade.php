@@ -14,34 +14,113 @@
                 <h2 class="text-3xl font-bold text-brand-blue">Choose Your Giving Type</h2>
             </div>
 
-            <div x-data="{ giving: 'one-time', frequency: 'monthly', selectedAmount: null, selectedOneTimeAmount: null }" class="bg-white rounded-3xl border border-purple-100 shadow-sm overflow-hidden mb-12">
+            <div x-data="{
+                giving: 'one-time',
+                frequency: 'monthly',
+                programme: '',
+                selectedAmount: null,
+                customAmount: '',
+                loading: false,
+                paymentError: '',
+                get finalAmount() {
+                    return this.customAmount || (this.selectedAmount ? this.selectedAmount.replace(/,/g, '') : '');
+                },
+                async submitPayment(btn) {
+                    if (!this.finalAmount) return;
+
+                    const form = btn.closest('form');
+                    if (!form.reportValidity()) return;
+
+                    this.loading = true;
+                    this.paymentError = '';
+
+                    try {
+                        const res = await fetch('{{ route('get-involved.donate.prepare') }}', {
+                            method: 'POST',
+                            body: new FormData(form),
+                            headers: { 'X-CSRF-TOKEN': '{{ csrf_token() }}', 'Accept': 'application/json' },
+                        });
+
+                        const data = await res.json();
+
+                        if (!res.ok) {
+                            this.paymentError = data.message || 'Validation failed. Please check your details.';
+                            this.loading = false;
+                            return;
+                        }
+
+                        FlutterwaveCheckout({
+                            public_key: '{{ config('services.flutterwave.public_key') }}',
+                            tx_ref: data.tx_ref,
+                            amount: data.amount,
+                            currency: 'NGN',
+                            payment_options: 'card, banktransfer, ussd',
+                            redirect_url: '{{ route('get-involved.donate.verify') }}',
+                            customer: {
+                                email: data.donor_email,
+                                phone_number: data.donor_phone,
+                                name: data.donor_name,
+                            },
+                            customizations: {
+                                title: 'The Deborah Bonat Foundation',
+                                description: data.programme_type ? 'Donation — ' + data.programme_type : 'Donation',
+                                logo: '{{ asset('images/logo.png') }}',
+                            },
+                            onclose: () => { this.loading = false; },
+                        });
+                    } catch (e) {
+                        this.paymentError = 'Something went wrong. Please try again.';
+                        this.loading = false;
+                    }
+                }
+            }" class="bg-white rounded-3xl border border-purple-100 shadow-sm overflow-hidden mb-12">
+
+                {{-- Flash messages --}}
+                @if(session('payment_success'))
+                    <div class="mx-8 mt-8 p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 text-sm flex items-start gap-2">
+                        <i class="fa-solid fa-circle-check text-green-500 mt-0.5 shrink-0"></i>
+                        <span>{{ session('payment_success') }}</span>
+                    </div>
+                @endif
+
+                @if(session('payment_error'))
+                    <div class="mx-8 mt-8 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700 text-sm flex items-start gap-2">
+                        <i class="fa-solid fa-circle-exclamation text-red-500 mt-0.5 shrink-0"></i>
+                        <span>{{ session('payment_error') }}</span>
+                    </div>
+                @endif
 
                 {{-- Toggle --}}
                 <div class="flex border-b border-gray-100">
-                    <button
+                    <button type="button"
                         @click="giving = 'one-time'"
                         class="flex-1 py-4 text-sm font-semibold transition-colors"
-                        :class="giving === 'one-time' ? 'bg-brand-blue text-white' : 'text-gray-500 hover:text-brand-blue'"
-                    >
+                        :class="giving === 'one-time' ? 'bg-brand-blue text-white' : 'text-gray-500 hover:text-brand-blue'">
                         One-Time Gift
                     </button>
-                    <button
+                    <button type="button"
                         @click="giving = 'legacy'"
                         class="flex-1 py-4 text-sm font-semibold transition-colors"
-                        :class="giving === 'legacy' ? 'bg-brand-blue text-white' : 'text-gray-500 hover:text-brand-blue'"
-                    >
+                        :class="giving === 'legacy' ? 'bg-brand-blue text-white' : 'text-gray-500 hover:text-brand-blue'">
                         Legacy Gift (Recurring)
                     </button>
                 </div>
 
-                <div class="p-8 sm:p-12">
+                <form class="p-8 sm:p-12">
+                    @csrf
+                    <input type="hidden" name="give_type" x-ref="giveType" x-effect="$refs.giveType.value = giving">
+                    <input type="hidden" name="frequency" x-ref="frequency" x-effect="$refs.frequency.value = frequency">
+                    <input type="hidden" name="programme_type" x-ref="programme" x-effect="$refs.programme.value = programme">
+                    <input type="hidden" name="amount" x-ref="amount" x-effect="$refs.amount.value = finalAmount">
+
+                    {{-- One-Time --}}
                     <div x-show="giving === 'one-time'">
                         <h3 class="text-xl font-bold text-brand-blue mb-2">Make a One-Time Gift</h3>
-                        <p class="text-gray-500 text-sm mb-8">A single gift to any of our five programs. Every amount is meaningful.</p>
+                        <p class="text-gray-500 text-sm mb-6">A single gift to any of our five programs. Every amount is meaningful.</p>
                         <div class="space-y-5">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Choose a Program</label>
-                                <select class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue">
+                                <select x-model="programme" class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue">
                                     <option value="">General Fund (where most needed)</option>
                                     <option value="widows">Widow Empowerment (W2W)</option>
                                     <option value="hope">Orphan Care (HOPE Fund)</option>
@@ -55,21 +134,25 @@
                                 <div class="grid grid-cols-3 sm:grid-cols-5 gap-3 mb-3">
                                     @foreach(['2,500', '5,000', '10,000', '25,000', '50,000'] as $amount)
                                         <button type="button"
-                                            @click="selectedOneTimeAmount = '{{ $amount }}'"
+                                            @click="selectedAmount = '{{ $amount }}'; customAmount = ''"
                                             class="py-2.5 text-sm font-semibold border rounded-xl transition-colors"
-                                            :class="selectedOneTimeAmount === '{{ $amount }}' ? 'border-brand-blue bg-brand-blue text-white' : 'border-gray-200 hover:border-brand-blue hover:text-brand-blue'">
+                                            :class="selectedAmount === '{{ $amount }}' && !customAmount ? 'border-brand-blue bg-brand-blue text-white' : 'border-gray-200 hover:border-brand-blue hover:text-brand-blue'">
                                             ₦{{ $amount }}
                                         </button>
                                     @endforeach
                                 </div>
-                                <input type="number" placeholder="Enter custom amount" class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue/30">
+                                <input type="number" x-model="customAmount" @input="selectedAmount = null"
+                                    placeholder="Or enter custom amount"
+                                    min="100"
+                                    class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue/30">
                             </div>
                         </div>
                     </div>
 
+                    {{-- Legacy --}}
                     <div x-show="giving === 'legacy'" style="display:none">
                         <h3 class="text-xl font-bold text-brand-blue mb-2">Set Up a Legacy Gift</h3>
-                        <p class="text-gray-500 text-sm mb-8">A recurring monthly or annual gift that sustains our programs long-term. This is how legacies are built.</p>
+                        <p class="text-gray-500 text-sm mb-6">A recurring monthly or annual gift that sustains our programs long-term. This is how legacies are built.</p>
                         <div class="space-y-5">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-2">Frequency</label>
@@ -91,19 +174,72 @@
                                 <div class="grid grid-cols-3 gap-3 mb-3">
                                     @foreach(['1,000', '2,500', '5,000', '10,000', '25,000'] as $amount)
                                         <button type="button"
-                                            @click="selectedAmount = '{{ $amount }}'"
+                                            @click="selectedAmount = '{{ $amount }}'; customAmount = ''"
                                             class="py-2.5 text-sm font-semibold border rounded-xl transition-colors"
-                                            :class="selectedAmount === '{{ $amount }}' ? 'border-brand-blue bg-brand-blue text-white' : 'border-gray-200 hover:border-brand-blue hover:text-brand-blue'">
+                                            :class="selectedAmount === '{{ $amount }}' && !customAmount ? 'border-brand-blue bg-brand-blue text-white' : 'border-gray-200 hover:border-brand-blue hover:text-brand-blue'">
                                             ₦{{ $amount }}
                                         </button>
                                     @endforeach
                                 </div>
+                                <input type="number" x-model="customAmount" @input="selectedAmount = null"
+                                    placeholder="Or enter custom amount"
+                                    min="100"
+                                    class="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue/30">
                             </div>
                         </div>
                     </div>
 
+                    {{-- Donor Details --}}
+                    <div class="mt-8 pt-8 border-t border-gray-100 space-y-4">
+                        <h4 class="text-sm font-semibold text-gray-700">Your Details</h4>
+
+                        <div x-show="paymentError" x-text="paymentError" class="p-3 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm"></div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="donor_name" class="block text-sm font-medium text-gray-700 mb-1.5">Full Name <span class="text-red-400">*</span></label>
+                                <input type="text" id="donor_name" name="donor_name" value="{{ old('donor_name') }}" required maxlength="100"
+                                    placeholder="Your full name"
+                                    class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue @error('donor_name') border-red-400 @enderror">
+                                @error('donor_name') <p class="mt-1 text-red-500 text-xs">{{ $message }}</p> @enderror
+                            </div>
+                            <div>
+                                <label for="donor_phone" class="block text-sm font-medium text-gray-700 mb-1.5">Phone Number</label>
+                                <input type="tel" id="donor_phone" name="donor_phone" value="{{ old('donor_phone') }}" maxlength="20"
+                                    placeholder="+234 800 000 0000"
+                                    class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue @error('donor_phone') border-red-400 @enderror">
+                                @error('donor_phone') <p class="mt-1 text-red-500 text-xs">{{ $message }}</p> @enderror
+                            </div>
+                        </div>
+                        <div>
+                            <label for="donor_email" class="block text-sm font-medium text-gray-700 mb-1.5">Email Address <span class="text-red-400">*</span></label>
+                            <input type="email" id="donor_email" name="donor_email" value="{{ old('donor_email') }}" required maxlength="150"
+                                placeholder="you@example.com"
+                                class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue @error('donor_email') border-red-400 @enderror">
+                            @error('donor_email') <p class="mt-1 text-red-500 text-xs">{{ $message }}</p> @enderror
+                        </div>
+                    </div>
+
+                    {{-- Pay Button --}}
+                    <button type="button"
+                        @click="submitPayment($el)"
+                        class="mt-6 w-full py-4 bg-brand-gold text-white rounded-xl font-bold text-sm hover:bg-brand-gold/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                        x-bind:disabled="!finalAmount || loading">
+                        <i class="fa-solid fa-spinner fa-spin text-xs" x-show="loading"></i>
+                        <i class="fa-solid fa-lock text-xs" x-show="!loading"></i>
+                        <span x-text="loading ? 'Preparing...' : 'Pay Securely with Flutterwave'"></span>
+                    </button>
+                    <p class="mt-2 text-center text-gray-400 text-xs">A secure Flutterwave checkout window will open.</p>
+
+                    {{-- Divider --}}
+                    <div class="mt-10 flex items-center gap-3">
+                        <div class="flex-1 h-px bg-gray-100"></div>
+                        <p class="text-gray-400 text-xs font-medium">Or pay by bank transfer</p>
+                        <div class="flex-1 h-px bg-gray-100"></div>
+                    </div>
+
                     {{-- Bank Transfer Details --}}
-                    <div class="mt-8 rounded-2xl border border-purple-100 overflow-hidden">
+                    <div class="mt-6 rounded-2xl border border-purple-100 overflow-hidden">
                         <div class="bg-brand-blue px-5 py-3 flex items-center gap-2">
                             <i class="fa-solid fa-building-columns text-brand-gold text-sm"></i>
                             <p class="text-white font-semibold text-sm">Bank Transfer Details</p>
@@ -126,11 +262,7 @@
                             <p class="text-gray-400 text-xs">After your transfer, please submit your receipt below so we can confirm and acknowledge your gift.</p>
                         </div>
                     </div>
-
-                    <div class="mt-4 text-center text-gray-400 text-xs">
-                        Online payment gateway coming soon.
-                    </div>
-                </div>
+                </form>
             </div>
 
             {{-- Receipt Upload --}}
@@ -248,5 +380,9 @@
             </div>
         </div>
     </section>
+
+    @push('scripts')
+        <script src="https://checkout.flutterwave.com/v3.js"></script>
+    @endpush
 
 </x-layouts.site>

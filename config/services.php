@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    'flutterwave' => [
+        'public_key' => env('FLUTTERWAVE_PUBLIC_KEY'),   // FLWPUBK_TEST-...-X  (inline checkout)
+        'secret_key' => env('FLUTTERWAVE_SECRET_KEY'),   // FLWSECK_TEST-...-X  (server-side verify)
+        'encryption_key' => env('FLUTTERWAVE_ENCRYPTION_KEY'),
+    ],
+
 ];

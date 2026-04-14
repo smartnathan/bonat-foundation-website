@@ -231,7 +231,7 @@
                         </div>
                         <div class="flex items-start gap-2 text-gray-400 italic">
                             <i class="fa-regular fa-clock w-4 text-center shrink-0 mt-0.5"></i>
-                            <span>Time TBC</span>
+                            <span>10:00 AM</span>
                         </div>
                         <div class="flex items-start gap-2 text-gray-600">
                             <i class="fa-solid fa-location-dot text-brand-gold mt-0.5 w-4 text-center shrink-0"></i>
