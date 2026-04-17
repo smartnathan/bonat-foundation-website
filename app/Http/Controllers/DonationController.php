@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\DonationAcknowledgement;
 use App\Models\Donation;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class DonationController extends Controller
@@ -97,6 +99,8 @@ class DonationController extends Controller
             'payment_date' => now(),
             'payment_type' => $data['payment_type'] ?? null,
         ]);
+
+        Mail::to($donation->donor_email)->send(new DonationAcknowledgement($donation->fresh()));
 
         return redirect()->route('get-involved.donate')
             ->with('payment_success', 'Thank you, '.$donation->donor_name.'! Your donation of ₦'.number_format((float) $donation->amount, 2).' has been confirmed. Reference: '.$data['tx_ref']);

@@ -127,6 +127,7 @@
                                     <option value="elderly">Elderly Care (GCN)</option>
                                     <option value="missions">Missions Support</option>
                                     <option value="new-converts">New Convert Care (Deborah's Basket)</option>
+                                    <option value="taraba-mission">The Taraba Mission Project</option>
                                 </select>
                             </div>
                             <div>
@@ -230,6 +231,22 @@
                         <span x-text="loading ? 'Preparing...' : 'Pay Securely with Flutterwave'"></span>
                     </button>
                     <p class="mt-2 text-center text-gray-400 text-xs">A secure Flutterwave checkout window will open.</p>
+
+                    {{-- PayPal --}}
+                    <div class="mt-4 flex items-center gap-3">
+                        <div class="flex-1 h-px bg-gray-100"></div>
+                        <p class="text-gray-400 text-xs font-medium">or pay with</p>
+                        <div class="flex-1 h-px bg-gray-100"></div>
+                    </div>
+                    <a href="https://www.paypal.biz/deborahfoundation" target="_blank" rel="noopener noreferrer"
+                        class="mt-4 w-full py-4 bg-[#0070BA] text-white rounded-xl font-bold text-sm hover:bg-[#005ea6] transition-colors flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-white" aria-hidden="true">
+                            <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944 3.72a.77.77 0 0 1 .76-.641h6.964c2.612 0 4.436.552 5.42 1.64.944 1.04 1.192 2.347.738 3.886a6.52 6.52 0 0 1-.08.265c-.948 3.163-3.305 4.252-6.573 4.252H9.99a.77.77 0 0 0-.76.641l-.928 5.873a.64.64 0 0 1-.633.54H7.076zm9.365-13.9c-.802 2.676-2.927 3.492-5.67 3.492H9.226l1.04-6.578h2.43c1.764 0 3.017.332 3.72 1.063.565.592.74 1.444.424 2.518l.001.005z"/>
+                            <path d="M21.47 8.41c-.753 3.21-3.185 5.05-6.817 5.05h-1.24l-1.047 6.625a.64.64 0 0 1-.633.54h-2.39l.015-.094.928-5.873a.77.77 0 0 1 .76-.641h1.183c3.269 0 5.625-1.09 6.573-4.252l.08-.265c.392-.134.754-.32 1.07-.565a4.4 4.4 0 0 1 1.518-.565z"/>
+                        </svg>
+                        Pay with PayPal
+                    </a>
+                    <p class="mt-2 text-center text-gray-400 text-xs">You will be redirected to PayPal to complete your payment.</p>
 
                     {{-- Divider --}}
                     <div class="mt-10 flex items-center gap-3">
