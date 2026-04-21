@@ -64,7 +64,7 @@
                             customizations: {
                                 title: 'The Deborah Bonat Foundation',
                                 description: data.programme_type ? 'Donation — ' + data.programme_type : 'Donation',
-                                logo: '{{ asset('images/logo.png') }}',
+                                logo: '{{ asset('images/botnat-logo.png') }}',
                             },
                             onclose: () => { this.loading = false; },
                         });
