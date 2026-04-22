@@ -11,7 +11,6 @@ class PageController extends Controller
     {
         $condolences = Condolence::where('is_approved', true)
             ->latest()
-            ->take(12)
             ->get();
 
         return view('pages.legacy', compact('condolences'));

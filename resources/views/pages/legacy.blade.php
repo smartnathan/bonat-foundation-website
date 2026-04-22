@@ -640,7 +640,7 @@
                             <p class="text-sm">Be the first to leave a tribute for Mama Deborah.</p>
                         </div>
                     @else
-                        <div class="space-y-4 max-h-[580px] overflow-y-auto pr-1">
+                        <div class="space-y-4 max-h-[700px] overflow-y-auto pr-2 scroll-smooth" style="scrollbar-width: thin; scrollbar-color: #D4AF37 #f1f1f1;">
                             @foreach($condolences as $condolence)
                                 <div class="bg-brand-cream rounded-2xl p-5 border border-blue-100">
                                     <div class="flex items-start gap-3">

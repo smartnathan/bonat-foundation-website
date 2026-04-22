@@ -8,7 +8,13 @@
 
             {{-- Logo --}}
             <a href="{{ route('legacy') }}" class="flex items-center gap-2 shrink-0">
-                <img src="{{ asset('images/botnat-logo.png') }}" alt="The Deborah Bonat Foundation" class="h-14 w-auto rounded-md bg-white px-2 py-1">
+                <span class="text-brand-gold font-bold text-lg leading-tight tracking-wide">
+                    TDB<span class="text-white">F</span>
+                </span>
+                <span class="hidden sm:block text-white font-semibold text-sm leading-tight">
+                    The Deborah Bonat<br>
+                    <span class="text-brand-gold text-xs font-normal tracking-widest uppercase">Foundation</span>
+                </span>
             </a>
 
             {{-- Desktop Nav --}}
